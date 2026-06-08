@@ -785,4 +785,16 @@
       </div>
     </div>
   </body>
+  <script>
+    // JavaScript for FAB and Cart Sidebar
+    $(document).ready(function () {
+      $(".fixed").on("click", function () {
+        $("#cart-sidebar").toggleClass("hidden");
+      });
+
+      $("#cart-close").on("click", function () {
+        $("#cart-sidebar").addClass("hidden");
+      });
+    });
+  </script>
 </html>
