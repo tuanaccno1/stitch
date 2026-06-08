@@ -736,7 +736,7 @@
       </div>
     </footer>
     <!-- Floating Action Button (FAB) - For Home/Main actions -->
-    <button
+    <button id="cart-button"
       class="fixed bottom-8 right-8 bg-imperial-gold text-ebony-wood p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 z-40 group"
     >
       <span
@@ -788,7 +788,7 @@
   <script>
     // JavaScript for FAB and Cart Sidebar
     $(document).ready(function () {
-      $(".fixed").on("click", function () {
+      $("#cart-button").on("click", function () {
         $("#cart-sidebar").toggleClass("hidden");
       });
 
