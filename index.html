@@ -784,17 +784,20 @@
         </button>
       </div>
     </div>
-  </body>
-  <script>
+    <div class="overlay" id="overlay"></div>
+    <script>
     // JavaScript for FAB and Cart Sidebar
     $(document).ready(function () {
       $("#cart-button").on("click", function () {
         $("#cart-sidebar").toggleClass("hidden");
+        $("#overlay").addClass("active");
       });
 
-      $("#cart-close").on("click", function () {
+      $("#cart-close, #overlay").on("click", function () {
         $("#cart-sidebar").addClass("hidden");
+        $("#overlay").removeClass("active");
       });
     });
-  </script>
+    </script>
+  </body>
 </html>
