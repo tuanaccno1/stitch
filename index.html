@@ -1,824 +1,667 @@
 <!doctype html>
 <html class="light" lang="vi">
-  <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>Nước Mắm Đề Ghi - Tinh Hoa Từ Biển Cả</title>
-    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
-      rel="stylesheet"
-    />
-    <script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary-fixed": "#ffdad5",
-              surface: "#fff8f7",
-              "parchment-white": "#F9F6F0",
-              "on-secondary-fixed-variant": "#5b4300",
-              "inverse-surface": "#3b2d2f",
-              "secondary-fixed": "#ffdf9e",
-              "inverse-primary": "#ffb4a9",
-              "on-surface": "#25181a",
-              "tertiary-container": "#790003",
-              "imperial-gold": "#FCBE00",
-              "surface-container-highest": "#f5dddf",
-              tertiary: "#500001",
-              "on-error-container": "#93000a",
-              "outline-variant": "#e1bfba",
-              "on-surface-variant": "#59413d",
-              background: "#fff8f7",
-              "on-tertiary-container": "#ff7a6a",
-              "tertiary-fixed-dim": "#ffb4a9",
-              error: "#ba1a1a",
-              "error-container": "#ffdad6",
-              "surface-bright": "#fff8f7",
-              outline: "#8d706c",
-              "on-secondary-container": "#6c5000",
-              "ebony-wood": "#1C1012",
-              "on-secondary-fixed": "#261a00",
-              "secondary-container": "#febf04",
-              "surface-tint": "#ae3024",
-              "surface-container-high": "#fbe2e5",
-              "on-error": "#ffffff",
-              "primary-fixed-dim": "#ffb4a9",
-              "on-primary-container": "#ff7a69",
-              "on-tertiary": "#ffffff",
-              "on-tertiary-fixed": "#410001",
-              secondary: "#795900",
-              "surface-container": "#ffe9eb",
-              "surface-container-lowest": "#ffffff",
-              "surface-dim": "#ecd4d7",
-              "aged-terracotta": "#A90C0C",
-              "on-primary-fixed-variant": "#8d160f",
-              "sauce-amber": "#780303",
-              "on-secondary": "#ffffff",
-              "surface-container-low": "#fff0f1",
-              "primary-container": "#780303",
-              "on-primary": "#ffffff",
-              "on-background": "#25181a",
-              "on-tertiary-fixed-variant": "#930005",
-              primary: "#500001",
-              "surface-variant": "#f5dddf",
-              "tertiary-fixed": "#ffdad5",
-              "inverse-on-surface": "#ffecee",
-              "on-primary-fixed": "#410000",
-              "secondary-fixed-dim": "#fabd00",
-            },
-            borderRadius: {
-              DEFAULT: "0.125rem",
-              lg: "0.25rem",
-              xl: "0.5rem",
-              full: "0.75rem",
-            },
-            spacing: {
-              gutter: "24px",
-              "margin-desktop": "64px",
-              "container-max": "1200px",
-              unit: "8px",
-              "margin-mobile": "20px",
-            },
-            fontFamily: {
-              "display-lg": ["EB Garamond"],
-              "body-md": ["Manrope"],
-              caption: ["Manrope"],
-              "headline-md": ["EB Garamond"],
-              "body-lg": ["Manrope"],
-              "display-lg-mobile": ["EB Garamond"],
-              "headline-sm": ["EB Garamond"],
-              "label-caps": ["Manrope"],
-            },
-            fontSize: {
-              "display-lg": [
-                "48px",
-                {
-                  lineHeight: "56px",
-                  letterSpacing: "-0.02em",
-                  fontWeight: "600",
-                },
-              ],
-              "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
-              caption: ["14px", { lineHeight: "20px", fontWeight: "400" }],
-              "headline-md": [
-                "32px",
-                { lineHeight: "40px", fontWeight: "500" },
-              ],
-              "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
-              "display-lg-mobile": [
-                "36px",
-                {
-                  lineHeight: "44px",
-                  letterSpacing: "-0.01em",
-                  fontWeight: "600",
-                },
-              ],
-              "headline-sm": [
-                "24px",
-                { lineHeight: "32px", fontWeight: "500" },
-              ],
-              "label-caps": [
-                "12px",
-                {
-                  lineHeight: "16px",
-                  letterSpacing: "0.1em",
-                  fontWeight: "700",
-                },
-              ],
-            },
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Nước Mắm Đề Ghi - Tinh Hoa Từ Biển Cả</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary-fixed": "#ffdad5",
+            surface: "#fff8f7",
+            "parchment-white": "#F9F6F0",
+            "on-secondary-fixed-variant": "#5b4300",
+            "inverse-surface": "#3b2d2f",
+            "secondary-fixed": "#ffdf9e",
+            "inverse-primary": "#ffb4a9",
+            "on-surface": "#25181a",
+            "tertiary-container": "#790003",
+            "imperial-gold": "#FCBE00",
+            "surface-container-highest": "#f5dddf",
+            tertiary: "#500001",
+            "on-error-container": "#93000a",
+            "outline-variant": "#e1bfba",
+            "on-surface-variant": "#59413d",
+            background: "#fff8f7",
+            "on-tertiary-container": "#ff7a6a",
+            "tertiary-fixed-dim": "#ffb4a9",
+            error: "#ba1a1a",
+            "error-container": "#ffdad6",
+            "surface-bright": "#fff8f7",
+            outline: "#8d706c",
+            "on-secondary-container": "#6c5000",
+            "ebony-wood": "#1C1012",
+            "on-secondary-fixed": "#261a00",
+            "secondary-container": "#febf04",
+            "surface-tint": "#ae3024",
+            "surface-container-high": "#fbe2e5",
+            "on-error": "#ffffff",
+            "primary-fixed-dim": "#ffb4a9",
+            "on-primary-container": "#ff7a69",
+            "on-tertiary": "#ffffff",
+            "on-tertiary-fixed": "#410001",
+            secondary: "#795900",
+            "surface-container": "#ffe9eb",
+            "surface-container-lowest": "#ffffff",
+            "surface-dim": "#ecd4d7",
+            "aged-terracotta": "#A90C0C",
+            "on-primary-fixed-variant": "#8d160f",
+            "sauce-amber": "#780303",
+            "on-secondary": "#ffffff",
+            "surface-container-low": "#fff0f1",
+            "primary-container": "#780303",
+            "on-primary": "#ffffff",
+            "on-background": "#25181a",
+            "on-tertiary-fixed-variant": "#930005",
+            primary: "#500001",
+            "surface-variant": "#f5dddf",
+            "tertiary-fixed": "#ffdad5",
+            "inverse-on-surface": "#ffecee",
+            "on-primary-fixed": "#410000",
+            "secondary-fixed-dim": "#fabd00",
+          },
+          borderRadius: {
+            DEFAULT: "0.125rem",
+            lg: "0.25rem",
+            xl: "0.5rem",
+            full: "0.75rem",
+          },
+          spacing: {
+            gutter: "24px",
+            "margin-desktop": "64px",
+            "container-max": "1200px",
+            unit: "8px",
+            "margin-mobile": "20px",
+          },
+          fontFamily: {
+            "display-lg": ["EB Garamond"],
+            "body-md": ["Manrope"],
+            caption: ["Manrope"],
+            "headline-md": ["EB Garamond"],
+            "body-lg": ["Manrope"],
+            "display-lg-mobile": ["EB Garamond"],
+            "headline-sm": ["EB Garamond"],
+            "label-caps": ["Manrope"],
+          },
+          fontSize: {
+            "display-lg": [
+              "48px",
+              {
+                lineHeight: "56px",
+                letterSpacing: "-0.02em",
+                fontWeight: "600",
+              },
+            ],
+            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+            caption: ["14px", { lineHeight: "20px", fontWeight: "400" }],
+            "headline-md": [
+              "32px",
+              { lineHeight: "40px", fontWeight: "500" },
+            ],
+            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+            "display-lg-mobile": [
+              "36px",
+              {
+                lineHeight: "44px",
+                letterSpacing: "-0.01em",
+                fontWeight: "600",
+              },
+            ],
+            "headline-sm": [
+              "24px",
+              { lineHeight: "32px", fontWeight: "500" },
+            ],
+            "label-caps": [
+              "12px",
+              {
+                lineHeight: "16px",
+                letterSpacing: "0.1em",
+                fontWeight: "700",
+              },
+            ],
           },
         },
-      };
-    </script>
-    <style>
-      .material-symbols-outlined {
-          font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
-      }
-      .text-shadow-premium {
-          text-shadow: 0px 2px 4px rgba(0,0,0,0.3);
-      }
-      .bg-noise {
-          background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
-          opacity: 0.03;
-      }
-      .cart-sidebar {
-          position: fixed;
-          top: 0;
-          right: -100%;
-          width: 400px;
-          height: 100%;
-          background-color: white;
-          z-index: 2000;
-          box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
-          transition: right 0.3s ease-in-out;
-          display: flex;
-          flex-direction: column;
-      }
+      },
+    };
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    }
 
-      .cart-sidebar.active {
-          right: 0;
-      }
+    .text-shadow-premium {
+      text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+    }
 
+    .bg-noise {
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+      opacity: 0.03;
+    }
 
-    </style>
-  </head>
-  <body
-    class="bg-parchment-white text-ebony-wood font-body-md overflow-x-hidden"
-  >
-    <!-- Top Navigation Bar -->
-    <nav
-      class="bg-primary flex justify-between items-center px-margin-desktop py-4 w-full sticky top-0 z-50 border-b border-imperial-gold/30 shadow-sm"
-    >
-      <div
-        class="font-display-lg text-headline-sm text-imperial-gold uppercase tracking-widest"
-      >
-        Nước Mắm Đông hải
-      </div>
-      <div class="hidden md:flex items-center space-x-8">
-        <a
-          class="font-body-md text-body-md text-imperial-gold border-b-2 border-imperial-gold pb-1"
-          href="#"
-          >Giới thiệu</a
-        >
-        <a
-          class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
-          href="#Product"
-          >Sản phẩm</a
-        >
-        <a
-          class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
-          href="#Process"
-          >Quy trình</a
-        >
-        <a
-          class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
-          href="#News"
-          >Tin tức</a
-        >
-        <a
-          class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
-          href="#lien-he-section"
-          >Liên hệ</a
-        >
-      </div>
+    .cart-sidebar {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 400px;
+      height: 100%;
+      background-color: white;
+      z-index: 2000;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cart-sidebar.active {
+      right: 0;
+    }
+  </style>
+</head>
+
+<body class="bg-parchment-white text-ebony-wood font-body-md overflow-x-hidden">
+  <!-- Top Navigation Bar -->
+  <nav
+    class="flex bg-primary justify-between items-center px-margin-desktop py-4 w-full sticky top-0 z-50 border-b border-imperial-gold/30 shadow-sm">
+    <div class="font-display-lg text-headline-sm text-imperial-gold uppercase tracking-widest">
+      Nước Mắm Đông hải
+    </div>
+    <div class="hidden lg:flex items-center space-x-8">
+      <a class="font-body-md text-body-md text-imperial-gold border-b-2 border-imperial-gold pb-1" href="#">Giới
+        thiệu</a>
+      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        href="#Product">Sản phẩm</a>
+      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        href="#Process">Quy trình</a>
+      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        href="#News">Tin tức</a>
+      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        href="#lien-he-section">Liên hệ</a>
+    </div>
+    <div class="flex space-x-4">
       <button
-        class="bg-sauce-amber text-parchment-white px-6 py-2 font-label-caps text-label-caps rounded-lg hover:bg-aged-terracotta transition-all duration-300"
-      >
+        class="bg-sauce-amber text-parchment-white px-6 py-2 font-label-caps text-label-caps rounded-lg hover:bg-aged-terracotta transition-all duration-300">
         Mua ngay
       </button>
-    </nav>
-    <!-- Hero Section -->
-    <header class="relative w-full h-[85vh] flex items-center overflow-hidden">
-      <div class="absolute inset-0 z-0">
-        <img
-          alt="Nước Mắm Đề Ghi Banner"
-          class="w-full h-full object-cover"
-          src="./imagine/vietgoing_puw2103111501.webp"
-        />
-        <div
-          class="absolute inset-0 bg-gradient-to-r from-ebony-wood/80 via-ebony-wood/40 to-transparent"
-        ></div>
-      </div>
-      <div
-        class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full"
-      >
-        <div class="max-w-2xl text-parchment-white">
-          <span
-            class="font-label-caps text-label-caps text-imperial-gold tracking-[0.3em] uppercase block mb-4"
-            >Tinh hoa làng chài cổ</span
-          >
-          <h1
-            class="font-display-lg text-display-lg mb-6 leading-tight text-shadow-premium"
-          >
-            Nước Mắm Đông Hải - Tinh Hoa Từ Biển Cả
-          </h1>
-          <p
-            class="font-body-lg text-body-lg mb-8 text-parchment-white/90 leading-relaxed"
-          >
-            Dòng nước mắm nhĩ đặc biệt được chắt lọc từ những mẻ cá cơm tươi hòa
-            cùng muối biển tinh khiết, ủ chượp theo phương pháp truyền thống qua
-            thời gian dài. Từng giọt mắm mang trong mình vị mặn mòi của biển Đề
-            Gi, hương thơm đậm đà và hậu vị ngọt thanh tự nhiên. Không chỉ là
-            gia vị trong bữa cơm, nước mắm Đông Hải còn là sự gửi gắm của tâm
-            huyết, sự tỉ mỉ và tình yêu dành cho hương vị quê nhà
-          </p>
-          <div class="flex gap-4"></div>
-        </div>
-      </div>
-    </header>
-    <!-- Heritage Section -->
-    <section
-      class="py-24 px-margin-desktop max-w-container-max mx-auto relative"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-        <div class="order-2 md:order-1 relative">
-          <div
-            class="absolute -top-4 -left-4 w-full h-full border border-imperial-gold/30 -z-10 translate-x-4 translate-y-4"
-          ></div>
-          <img
-            alt="Lịch sử làng nghề Đề Ghi"
-            class="w-full aspect-[3/2] object-cover shadow-2xl"
-            src="https://images2.thanhnien.vn/528068263637045248/2023/6/17/lang-bien-tro-minh-1-1686961747053356563240.jpg"
-          />
-          <div
-            class="absolute -bottom-6 -right-6 bg-sauce-amber p-6 text-parchment-white hidden lg:block"
-          >
-            <p class="font-display-lg text-headline-sm italic">
-              "Gìn giữ hồn quê"
-            </p>
-          </div>
-        </div>
-        <div class="order-1 md:order-2">
-          <span
-            class="font-label-caps text-label-caps text-sauce-amber block mb-4"
-            >Hơn 100 năm truyền thống</span
-          >
-          <h2 class="font-display-lg text-display-lg mb-6 text-primary">
-            Di sản làng chài Đề Gi
-          </h2>
-          <div class="w-16 h-1 bg-imperial-gold mb-8"></div>
-          <p
-            class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed"
-          >
-            Làng chài Đề Gi không chỉ nổi tiếng với những đoàn tàu đánh cá tấp
-            nập, mà còn là nơi lưu giữ hương vị nước mắm truyền thống qua bao
-            thế hệ. Từ cá cơm tươi và muối biển mặn mòi, từng mẻ mắm được ủ
-            chượp chậm rãi, kết tinh từ thời gian, kinh nghiệm và sự tận tâm của
-            người làm nghề
-          </p>
-          <p
-            class="font-body-md text-body-md text-on-surface-variant italic border-l-4 border-imperial-gold pl-6"
-          >
-            "Chúng tôi không chỉ làm nước mắm, chúng tôi đang bảo tồn một phần
-            tâm hồn của biển cả Bình Định."
-          </p>
-        </div>
-      </div>
-    </section>
-    <!-- Featured Products -->
-    <section class="bg-ebony-wood py-24 relative overflow-hidden" id="Product">
-      <div class="absolute inset-0 bg-noise pointer-events-none"></div>
-      <div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
-        <div class="text-center mb-16">
-          <span
-            class="font-label-caps text-label-caps text-imperial-gold mb-4 block"
-            >Bộ sưu tập cao cấp</span
-          >
-          <h2 class="font-display-lg text-display-lg text-parchment-white">
-            Sản phẩm nổi bật
-          </h2>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Product 1 -->
-          <div
-            class="group bg-primary/20 border border-imperial-gold/20 p-8 text-center transition-all hover:bg-primary/30 hover:border-imperial-gold/50"
-          >
-            <div
-              class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-lg flex items-center justify-center p-8"
-            >
-              <img
-                alt="Nước mắm Đề Ghi 43N"
-                class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
-                src="./imagine/cf0ef831-800a-4f89-8c98-b504eb024f02.png"
-              />
-            </div>
-            <span
-              class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4"
-              >HẠNG THƯỢNG HẠNG</span
-            >
-            <h3
-              class="font-display-lg text-headline-sm text-parchment-white mb-2"
-            >
-              Nước mắm Đông Hải 43N
-            </h3>
-            <p class="text-parchment-white/60 mb-6 font-body-md">
-              Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.
-            </p>
-            <button
-              class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors"
-            >
-              Chi tiết
-            </button>
-          </div>
-          <!-- Product 2 -->
-          <div
-            class="group bg-primary/20 border border-imperial-gold/20 p-8 text-center transition-all hover:bg-primary/30 hover:border-imperial-gold/50"
-          >
-            <div
-              class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-lg flex items-center justify-center p-8"
-            >
-              <img
-                alt="Nước mắm Đề Ghi 40N"
-                class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
-                src="./imagine/z7890083636863_d541172f5eb8e0310144e0e5789ee7ff.jpg"
-              />
-            </div>
-            <span
-              class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4"
-              >HẠNG ĐẶC BIỆT</span
-            >
-            <h3
-              class="font-display-lg text-headline-sm text-parchment-white mb-2"
-            >
-              Nước mắm Đông Hải 40N
-            </h3>
-            <p class="text-parchment-white/60 mb-6 font-body-md">
-              Hương vị cân bằng hoàn hảo, phù hợp cho mọi bữa cơm gia đình.
-            </p>
-            <button
-              class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors"
-            >
-              Chi tiết
-            </button>
-          </div>
-          <!-- Product 3 -->
-          <div
-            class="group bg-primary/20 border border-imperial-gold/20 p-8 text-center transition-all hover:bg-primary/30 hover:border-imperial-gold/50"
-          >
-            <div
-              class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-lg flex items-center justify-center p-8"
-            >
-              <img
-                alt="Nước mắm Đề Ghi 35N"
-                class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
-                src="./imagine/z7890085109257_c6f8ba663e0f4b3ab5a42cb475ec287c.jpg"
-              />
-            </div>
-            <span
-              class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4"
-              >HẠNG NGUYÊN CHẤT</span
-            >
-            <h3
-              class="font-display-lg text-headline-sm text-parchment-white mb-2"
-            >
-              Nước mắm Đông Hải 35N
-            </h3>
-            <p class="text-parchment-white/60 mb-6 font-body-md">
-              Màu hổ phách trong trẻo, mặn mòi hương vị biển khơi.
-            </p>
-            <button
-              class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors"
-            >
-              Chi tiết
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- Process Section -->
-    <section class="py-24 bg-surface relative" id="Process">
-      <div class="px-margin-desktop max-w-container-max mx-auto">
-        <div class="flex flex-col md:flex-row items-center gap-16">
-          <div class="w-full md:w-1/2">
-            <span
-              class="font-label-caps text-label-caps text-sauce-amber block mb-4 uppercase"
-              >Quy trình ủ chượp</span
-            >
-            <h2 class="font-display-lg text-display-lg mb-8 text-primary">
-              12 tháng ròng rã trong thùng gỗ quý
-            </h2>
-            <div class="space-y-6">
-              <div class="flex gap-4 items-start">
-                <span
-                  class="font-display-lg text-headline-md text-imperial-gold"
-                  >01.</span
-                >
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Cá Cơm Tươi</h4>
-                  <p class="text-on-surface-variant">
-                    Cá cơm được chọn lọc ngay khi vừa cập bến, giữ trọn độ tươi
-                    ngon và hương vị tự nhiên của biển.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4 items-start">
-                <span
-                  class="font-display-lg text-headline-md text-imperial-gold"
-                  >02.</span
-                >
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Muối Biển Tinh Khiết</h4>
-                  <p class="text-on-surface-variant">
-                    Sử dụng muối biển sạch từ vùng đất nắng gió Bình Định, ủ kho
-                    để loại bỏ vị chát.
-                  </p>
-                </div>
-              </div>
-              <div class="flex gap-4 items-start">
-                <span
-                  class="font-display-lg text-headline-md text-imperial-gold"
-                  >03.</span
-                >
-                <div>
-                  <h4 class="font-bold text-lg mb-1">Thời Gian Lên Men</h4>
-                  <p class="text-on-surface-variant">
-                    Ủ chượp tự nhiên hoàn toàn trong thùng gỗ ít nhất 12 tháng
-                    trước khi rút mắm nhĩ.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="w-full md:w-1/2 relative">
-            <img
-              alt="Quy trình ủ chượp nước mắm"
-              class="w-full h-auto rounded-lg shadow-xl"
-              src="https://lh3.googleusercontent.com/aida/AP1WRLsK2PdMFTTQvB4fm_l4LKhUUiTo0gz_9cQDLIsJvz04IQH9fHGccds1c3Hj14SLkUj-gUg2enVCqw2Q7tkiKz9S-ZXUvkLe58LU-5PTNi63zWBjYmPJteB4UgkmeXZYUJPVnIcWFEdGXjnalhxtdyF-AMwUznLr9Hq9J-UFeXqSHXnJEjBGUJc88Y9NjQHfQ6HN_ZzsClpkCFWF1OFou7UJPo3c4PTNRXq8OgHqPu4UnwShd5sgmVDtIlU"
-            />
-            <!-- The Seal Component -->
-            <div
-              class="absolute -top-10 -right-10 w-40 h-40 bg-imperial-gold rounded-full flex items-center justify-center p-4 shadow-lg transform rotate-12 border-4 border-ebony-wood"
-            >
-              <div
-                class="border border-dashed border-ebony-wood/40 rounded-full w-full h-full flex flex-col items-center justify-center text-center"
-              >
-                <span
-                  class="font-label-caps text-[10px] text-ebony-wood leading-none"
-                  >CHỨNG NHẬN</span
-                >
-                <span
-                  class="font-display-lg text-headline-sm text-ebony-wood my-1 leading-none"
-                  >100%</span
-                >
-                <span
-                  class="font-label-caps text-[10px] text-ebony-wood leading-none"
-                  >TỰ NHIÊN</span
-                >
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- News & Tips Section -->
-    <section
-      class="py-24 px-margin-desktop max-w-container-max mx-auto"
-      id="News"
-    >
-      <div class="flex justify-between items-end mb-12">
-        <div>
-          <span
-            class="font-label-caps text-label-caps text-sauce-amber block mb-2"
-            >Chia sẻ &amp; Cảm hứng</span
-          >
-          <h2 class="font-display-lg text-display-lg text-primary">
-            Tin tức &amp; Mẹo hay ẩm thực
-          </h2>
-        </div>
-        <a
-          class="font-label-caps text-label-caps text-ebony-wood border-b border-ebony-wood pb-1 hidden md:block"
-          href="./news.html"
-          >Xem tất cả bài viết</a
-        >
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <article class="group cursor-pointer">
-          <div class="overflow-hidden mb-6 relative">
-            <img
-              alt="Vịt khía nước dừa với nước mắm"
-              class="w-full aspect-[1.36] object-cover transform group-hover:scale-105 transition-transform duration-700"
-              src="./imagine/bi-quyet-lam-thit-vit-khia-nuoc-dua-thom-nuc-mui-cuc-dua-com-202110112111074033.jpg"
-            />
-            <div
-              class="absolute top-4 left-4 bg-parchment-white px-3 py-1 font-label-caps text-[10px]"
-            >
-              CÔNG THỨC
-            </div>
-          </div>
-          <h3
-            class="font-display-lg text-headline-sm mb-3 group-hover:text-sauce-amber transition-colors"
-            href="./news.html"
-          >
-            Bí quyết món Vịt Khía Nước Dừa đậm đà bản sắc Miền Trung
-          </h3>
-          <p class="font-body-md text-on-surface-variant line-clamp-2">
-            Sự kết hợp giữa vị ngọt của nước dừa và mặn mòi của nước mắm Đề Ghi
-            tạo nên một món ăn không thể chối từ...
-          </p>
-          <div
-            class="mt-4 flex items-center gap-2 font-label-caps text-[11px] text-on-surface-variant"
-          >
-            <span class="material-symbols-outlined text-sm">schedule</span>
-            15/10/2023
-          </div>
-        </article>
-        <article class="group cursor-pointer">
-          <div class="overflow-hidden mb-6 relative">
-            <img
-              alt="Xôi xá xíu thơm lừng"
-              class="w-full aspect-[1.36] object-cover transform group-hover:scale-105 transition-transform duration-700"
-              src="./imagine/cach-nau-xoi-xa-xiu-ngon-don-gian-tai-nha-800.jpg"
-            />
-            <div
-              class="absolute top-4 left-4 bg-parchment-white px-3 py-1 font-label-caps text-[10px]"
-            >
-              MẸO HAY
-            </div>
-          </div>
-          <h3
-            class="font-display-lg text-headline-sm mb-3 group-hover:text-sauce-amber transition-colors"
-          >
-            Cách làm nước sốt Xá Xíu chuẩn vị với nước mắm truyền thống
-          </h3>
-          <p class="font-body-md text-on-surface-variant line-clamp-2">
-            Nước mắm 40N Đề Gi là "chìa khóa" giúp món xá xíu của bạn có màu sắc
-            đẹp và hương thơm quyến rũ...
-          </p>
-          <div
-            class="mt-4 flex items-center gap-2 font-label-caps text-[11px] text-on-surface-variant"
-          >
-            <span class="material-symbols-outlined text-sm">schedule</span>
-            10/10/2023
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- Footer -->
-    <section
-      class="py-24 px-margin-desktop bg-parchment-white"
-      id="lien-he-section"
-    >
-      <div class="max-w-container-max mx-auto">
-        <div class="text-center mb-12">
-          <h2 class="font-display-lg text-display-lg text-primary mb-4">
-            Liên Hệ
-          </h2>
-          <div class="w-24 h-1 bg-imperial-gold mx-auto"></div>
-        </div>
-        <div
-          class="max-w-2xl mx-auto bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border border-surface-variant"
-        >
-          <form class="space-y-6">
-            <div>
-              <label class="block font-bold text-ebony-wood mb-2" for="name"
-                >Họ và tên</label
-              >
-              <input
-                class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-imperial-gold focus:ring-1 focus:ring-imperial-gold outline-none transition-all bg-white"
-                id="name"
-                placeholder="Nhập tên của bạn"
-                type="text"
-              />
-            </div>
-            <div>
-              <label class="block font-bold text-ebony-wood mb-2" for="email"
-                >Email</label
-              >
-              <input
-                class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-imperial-gold focus:ring-1 focus:ring-imperial-gold outline-none transition-all bg-white"
-                id="email"
-                placeholder="Nhập email"
-                type="email"
-              />
-            </div>
-            <div>
-              <label class="block font-bold text-ebony-wood mb-2" for="message"
-                >Lời nhắn</label
-              >
-              <textarea
-                class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-imperial-gold focus:ring-1 focus:ring-imperial-gold outline-none transition-all bg-white resize-none"
-                id="message"
-                placeholder="Bạn cần hỗ trợ gì?"
-                rows="4"
-              ></textarea>
-            </div>
-            <button
-              class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
-              type="submit"
-            >
-              Gửi tin nhắn
-            </button>
-          </form>
-        </div>
-      </div>
-    </section>
-    <footer
-      class="bg-ebony-wood text-parchment-white border-t border-imperial-gold/20 pt-20 pb-8 overflow-hidden relative"
-    >
-      <div
-        class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full opacity-10 blur-[100px] -translate-y-1/2 translate-x-1/2"
-      ></div>
-      <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
-        <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
-          <div class="md:col-span-2">
-            <div
-              class="font-display-lg text-headline-md text-imperial-gold mb-8"
-            >
-              Nước Mắm Đông Hải
-            </div>
-            <p class="text-parchment-white/60 mb-8 max-w-md leading-relaxed">
-              Mang trong mình sứ mệnh gìn giữ và lan tỏa hương vị nước mắm nhĩ
-              truyền thống, Đông Hải tự hào là người bạn đồng hành trong mỗi bữa
-              cơm sum vầy của người Việt.
-            </p>
-            <div class="flex gap-4">
-              <a
-                class="w-10 h-10 border border-parchment-white/20 rounded-full flex items-center justify-center hover:border-imperial-gold hover:text-imperial-gold transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined text-sm">public</span>
-              </a>
-              <a
-                class="w-10 h-10 border border-parchment-white/20 rounded-full flex items-center justify-center hover:border-imperial-gold hover:text-imperial-gold transition-colors"
-                href="#"
-              >
-                <span class="material-symbols-outlined text-sm">mail</span>
-              </a>
-            </div>
-          </div>
-          <div>
-            <h5 class="font-label-caps text-label-caps text-imperial-gold mb-6">
-              Liên hệ Đông Hải
-            </h5>
-            <ul class="space-y-4 text-parchment-white/80">
-              <li class="flex items-start gap-3">
-                <span
-                  class="material-symbols-outlined text-imperial-gold text-lg"
-                  >location_on</span
-                >
-                <span class="">Làng chài Đề Gi, Phù Cát, Bình Định</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span
-                  class="material-symbols-outlined text-imperial-gold text-lg"
-                  >call</span
-                >
-                <span class="">0396.264.034</span>
-              </li>
-              <li class="flex items-start gap-3">
-                <span
-                  class="material-symbols-outlined text-imperial-gold text-lg"
-                  >mail</span
-                >
-                <span class="">Truong@nuocmamdeghi.vn</span>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h5 class="font-label-caps text-label-caps text-imperial-gold mb-6">
-              Liên kết nhanh
-            </h5>
-            <ul class="space-y-4">
-              <li class="">
-                <a
-                  class="text-parchment-white/60 hover:text-imperial-gold transition-colors"
-                  href="#"
-                  >Sản phẩm</a
-                >
-              </li>
-              <li class="">
-                <a
-                  class="text-parchment-white/60 hover:text-imperial-gold transition-colors"
-                  href="#"
-                  >Đại lý</a
-                >
-              </li>
-              <li class="">
-                <a
-                  class="text-parchment-white/60 hover:text-imperial-gold transition-colors"
-                  href="#"
-                  >Chính sách bảo mật</a
-                >
-              </li>
-              <li class="">
-                <a
-                  class="text-parchment-white/60 hover:text-imperial-gold transition-colors"
-                  href="#"
-                  >Điều khoản sử dụng</a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="border-t border-parchment-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-parchment-white/40 text-caption font-caption gap-4"
-        >
-          <p class="">
-            © 2026 Nước Mắm Truyền Thống Đông Hải. Tinh hoa từ biển cả.
-          </p>
-          <div class="flex gap-8">
-            <span class="">Designed by Truong Ho</span>
-            <span class="">Hàng Việt Nam Chất Lượng Cao</span>
-          </div>
-        </div>
-      </div>
-    </footer>
-    <!-- Floating Action Button (FAB) - For Home/Main actions -->
-    <button id="cart-button"
-      class="fixed bottom-8 right-8 bg-imperial-gold text-ebony-wood p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 z-40 group"
-    >
-      <span
-        class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform"
-        >shopping_cart</span
-      >
-      <span
-        class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-ebony-wood text-parchment-white px-4 py-2 rounded font-label-caps text-[10px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-        >Đặt hàng ngay</span
-      >
-    </button>
-    <div class="cart-sidebar w-full md:w-[400px]" role="dialog" aria-modal="true" id="cart-sidebar">
-      <div class="cart-header flex justify-between items-center p-6 border-b border-imperial-gold/20">
-        <h3 class="text-xl font-bold text-[#4B2E2E]">Giỏ hàng của bạn</h3>
-        <div class="cart-close cursor-pointer" id="cart-close">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            data-lucide="x"
-            aria-hidden="true"
-            class="lucide lucide-x"
-          >
-            <path d="M18 6 6 18"></path>
-            <path d="m6 6 12 12"></path>
-          </svg>
-        </div>
-      </div>
-      <div class="cart-items flex-1 overflow-y-auto p-5" id="cart-items">
-        <p class="text-center mt-5">Giỏ hàng trống</p>
-      </div>
-      <div class="cart-footer p-5 border-t border-gray-200">
-        <div class="cart-total flex justify-between text-2xl font-bold mb-5">
-          <span>Tổng cộng:</span>
-          <span id="cart-total-price">0&nbsp;₫</span>
-        </div>
-        <button class="w-full block bg-[#4B2E2E] text-white py-3 px-[30px] rounded-[50px] font-semibold cursor-pointer transition-[var(--transition)] border-none text-center hover:bg-[#3a2424] hover:-translate-y-[3px] hover:shadow-[0_5px_15px_rgba(75,46,46,0.3)]" id="checkout-btn">
-          Thanh toán ngay
-        </button>
+      <button class="lg:hidden text-imperial-gold focus:outline-none" id="mobile-menu-button"
+        aria-label="Mở menu di động"
+        onclick="$('#mobile-menu-overlay');">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+    </div>
+  </nav>
+  <!-- Mobile Menu -->
+  <div class="fixed inset-0 bg-ebony-wood/80 backdrop-blur-sm z-40 hidden" id="mobile-menu-overlay"></div>
+  <div
+    class="fixed top-0 right-0 w-64 h-full bg-ebony-wood text-parchment-white z-50 transform translate-x-full transition-transform duration-300"
+    id="mobile-menu">
+    <div class="p-6">
+      <button class="text-parchment-white focus:outline-none mb-8" id="mobile-menu-close"
+        aria-label="Đóng menu di động"
+        onclick="$('#mobile-menu-overlay').addClass('hidden'); $('#mobile-menu').removeClass('translate-x-full');">
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <nav class="flex flex-col space-y-6">
+        <a class="font-body-md text-body-md text-imperial-gold border-b-2 border-imperial-gold pb-1" href="#">Giới
+          thiệu</a>
+        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+          href="#Product">Sản phẩm</a>
+        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+          href="#Process">Quy trình</a>
+        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+          href="#News">Tin tức</a>
+        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+          href="#lien-he-section">Liên hệ</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="relative w-full h-[85vh] flex items-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img alt="Nước Mắm Đề Ghi Banner" class="w-full h-full object-cover"
+        src="./assets/images/vietgoing_puw2103111501.webp" />
+      <div class="absolute inset-0 bg-gradient-to-r from-ebony-wood/80 via-ebony-wood/40 to-transparent"></div>
+    </div>
+    <div class="relative z-10 px-margin-desktop max-w-container-max mx-auto w-full">
+      <div class="max-w-2xl text-parchment-white">
+        <span class="font-label-caps text-label-caps text-imperial-gold tracking-[0.3em] uppercase block mb-4">Tinh hoa
+          làng chài cổ</span>
+        <h1 class="font-display-lg text-display-lg mb-6 leading-tight text-shadow-premium">
+          Nước Mắm Đông Hải - Tinh Hoa Từ Biển Cả
+        </h1>
+        <p class="font-body-lg text-body-lg mb-8 text-parchment-white/90 leading-relaxed">
+          Dòng nước mắm nhĩ đặc biệt được chắt lọc từ những mẻ cá cơm tươi hòa
+          cùng muối biển tinh khiết, ủ chượp theo phương pháp truyền thống qua
+          thời gian dài. Từng giọt mắm mang trong mình vị mặn mòi của biển Đề
+          Gi, hương thơm đậm đà và hậu vị ngọt thanh tự nhiên. Không chỉ là
+          gia vị trong bữa cơm, nước mắm Đông Hải còn là sự gửi gắm của tâm
+          huyết, sự tỉ mỉ và tình yêu dành cho hương vị quê nhà
+        </p>
+        <div class="flex gap-4"></div>
       </div>
     </div>
-    <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-[1500] hidden" id="overlay"></div>
-    <script>
+  </header>
+  <!-- Heritage Section -->
+  <section class="py-24 px-margin-desktop max-w-container-max mx-auto relative">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div class="order-2 md:order-1 relative">
+        <div
+          class="absolute -top-4 -left-4 w-full h-full border border-imperial-gold/30 -z-10 translate-x-4 translate-y-4">
+        </div>
+        <img alt="Lịch sử làng nghề Đề Ghi" class="w-full aspect-[3/2] object-cover shadow-2xl"
+          src="https://images2.thanhnien.vn/528068263637045248/2023/6/17/lang-bien-tro-minh-1-1686961747053356563240.jpg" />
+        <div class="absolute -bottom-6 -right-6 bg-sauce-amber p-6 text-parchment-white hidden lg:block">
+          <p class="font-display-lg text-headline-sm italic">
+            "Gìn giữ hồn quê"
+          </p>
+        </div>
+      </div>
+      <div class="order-1 md:order-2">
+        <span class="font-label-caps text-label-caps text-sauce-amber block mb-4">Hơn 100 năm truyền thống</span>
+        <h2 class="font-display-lg text-display-lg mb-6 text-primary">
+          Di sản làng chài Đề Gi
+        </h2>
+        <div class="w-16 h-1 bg-imperial-gold mb-8"></div>
+        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+          Làng chài Đề Gi không chỉ nổi tiếng với những đoàn tàu đánh cá tấp
+          nập, mà còn là nơi lưu giữ hương vị nước mắm truyền thống qua bao
+          thế hệ. Từ cá cơm tươi và muối biển mặn mòi, từng mẻ mắm được ủ
+          chượp chậm rãi, kết tinh từ thời gian, kinh nghiệm và sự tận tâm của
+          người làm nghề
+        </p>
+        <p class="font-body-md text-body-md text-on-surface-variant italic border-l-4 border-imperial-gold pl-6">
+          "Chúng tôi không chỉ làm nước mắm, chúng tôi đang bảo tồn một phần
+          tâm hồn của biển cả Bình Định."
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Featured Products -->
+  <section class="bg-ebony-wood py-24 relative overflow-hidden" id="Product">
+    <div class="absolute inset-0 bg-noise pointer-events-none"></div>
+    <div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
+      <div class="text-center mb-16">
+        <span class="font-label-caps text-label-caps text-imperial-gold mb-4 block">Bộ sưu tập cao cấp</span>
+        <h2 class="font-display-lg text-display-lg text-parchment-white">
+          Sản phẩm nổi bật
+        </h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Product 1 -->
+        <div
+          class="group bg-primary/20 border border-imperial-gold/20 p-8 text-center transition-all hover:bg-primary/30 hover:border-imperial-gold/50">
+          <div class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-lg flex items-center justify-center p-8">
+            <img alt="Nước mắm Đề Ghi 43N"
+              class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
+              src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" />
+          </div>
+          <span
+            class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4">HẠNG
+            THƯỢNG HẠNG</span>
+          <h3 class="font-display-lg text-headline-sm text-parchment-white mb-2">
+            Nước mắm Đông Hải 43N
+          </h3>
+          <p class="text-parchment-white/60 mb-6 font-body-md">
+            Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.
+          </p>
+          <button
+            class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
+            Chi tiết
+          </button>
+        </div>
+        <!-- Product 2 -->
+        <div
+          class="group bg-primary/20 border border-imperial-gold/20 p-8 text-center transition-all hover:bg-primary/30 hover:border-imperial-gold/50">
+          <div class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-lg flex items-center justify-center p-8">
+            <img alt="Nước mắm Đề Ghi 40N"
+              class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
+              src="./assets/images/z7890083636863_d541172f5eb8e0310144e0e5789ee7ff.jpg" />
+          </div>
+          <span
+            class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4">HẠNG
+            ĐẶC BIỆT</span>
+          <h3 class="font-display-lg text-headline-sm text-parchment-white mb-2">
+            Nước mắm Đông Hải 40N
+          </h3>
+          <p class="text-parchment-white/60 mb-6 font-body-md">
+            Hương vị cân bằng hoàn hảo, phù hợp cho mọi bữa cơm gia đình.
+          </p>
+          <button
+            class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
+            Chi tiết
+          </button>
+        </div>
+        <!-- Product 3 -->
+        <div
+          class="group bg-primary/20 border border-imperial-gold/20 p-8 text-center transition-all hover:bg-primary/30 hover:border-imperial-gold/50">
+          <div class="aspect-square mb-8 overflow-hidden bg-white/5 rounded-lg flex items-center justify-center p-8">
+            <img alt="Nước mắm Đề Ghi 35N"
+              class="w-full h-full object-contain transform group-hover:scale-110 transition-transform duration-500"
+              src="./assets/images/z7890085109257_c6f8ba663e0f4b3ab5a42cb475ec287c.jpg" />
+          </div>
+          <span
+            class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4">HẠNG
+            NGUYÊN CHẤT</span>
+          <h3 class="font-display-lg text-headline-sm text-parchment-white mb-2">
+            Nước mắm Đông Hải 35N
+          </h3>
+          <p class="text-parchment-white/60 mb-6 font-body-md">
+            Màu hổ phách trong trẻo, mặn mòi hương vị biển khơi.
+          </p>
+          <button
+            class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
+            Chi tiết
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Process Section -->
+  <section class="py-24 bg-surface relative" id="Process">
+    <div class="px-margin-desktop max-w-container-max mx-auto">
+      <div class="flex flex-col md:flex-row items-center gap-16">
+        <div class="w-full md:w-1/2">
+          <span class="font-label-caps text-label-caps text-sauce-amber block mb-4 uppercase">Quy trình ủ chượp</span>
+          <h2 class="font-display-lg text-display-lg mb-8 text-primary">
+            12 tháng ròng rã trong thùng gỗ quý
+          </h2>
+          <div class="space-y-6">
+            <div class="flex gap-4 items-start">
+              <span class="font-display-lg text-headline-md text-imperial-gold">01.</span>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Cá Cơm Tươi</h4>
+                <p class="text-on-surface-variant">
+                  Cá cơm được chọn lọc ngay khi vừa cập bến, giữ trọn độ tươi
+                  ngon và hương vị tự nhiên của biển.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="font-display-lg text-headline-md text-imperial-gold">02.</span>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Muối Biển Tinh Khiết</h4>
+                <p class="text-on-surface-variant">
+                  Sử dụng muối biển sạch từ vùng đất nắng gió Bình Định, ủ kho
+                  để loại bỏ vị chát.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="font-display-lg text-headline-md text-imperial-gold">03.</span>
+              <div>
+                <h4 class="font-bold text-lg mb-1">Thời Gian Lên Men</h4>
+                <p class="text-on-surface-variant">
+                  Ủ chượp tự nhiên hoàn toàn trong thùng gỗ ít nhất 12 tháng
+                  trước khi rút mắm nhĩ.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-full md:w-1/2 relative">
+          <div class="rounded-lg overflow-hidden shadow-2xl">
+            <img alt="Quy trình ủ chượp nước mắm"
+            class="w-full h-full object-cover"
+            src="./assets/images/nuoc-mam-nhi-duoc-san-xuat-vo-cung-ti-mi-2.jpeg" />
+          </div> 
+          <!-- The Seal Component -->
+          <div
+            class="absolute -top-10 -right-10 w-40 h-40 bg-imperial-gold rounded-full flex items-center justify-center p-4 shadow-lg transform rotate-12 border-4 border-ebony-wood">
+            <div
+              class="border border-dashed border-ebony-wood/40 rounded-full w-full h-full flex flex-col items-center justify-center text-center">
+              <span class="font-label-caps text-[10px] text-ebony-wood leading-none">CHỨNG NHẬN</span>
+              <span class="font-display-lg text-headline-sm text-ebony-wood my-1 leading-none">100%</span>
+              <span class="font-label-caps text-[10px] text-ebony-wood leading-none">TỰ NHIÊN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- News & Tips Section -->
+  <section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="News">
+    <div class="flex justify-between items-end mb-12">
+      <div>
+        <span class="font-label-caps text-label-caps text-sauce-amber block mb-2">Chia sẻ &amp; Cảm hứng</span>
+        <h2 class="font-display-lg text-display-lg text-primary">
+          Tin tức &amp; Mẹo hay ẩm thực
+        </h2>
+      </div>
+      <a class="font-label-caps text-label-caps text-ebony-wood border-b border-ebony-wood pb-1 hidden md:block"
+        href="./news.html">Xem tất cả bài viết</a>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <article class="group cursor-pointer">
+        <div class="overflow-hidden mb-6 relative">
+          <img alt="Vịt khía nước dừa với nước mắm"
+            class="w-full aspect-[1.36] object-cover transform group-hover:scale-105 transition-transform duration-700"
+            src="./assets/images/bi-quyet-lam-thit-vit-khia-nuoc-dua-thom-nuc-mui-cuc-dua-com-202110112111074033.jpg" />
+          <div class="absolute top-4 left-4 bg-parchment-white px-3 py-1 font-label-caps text-[10px]">
+            CÔNG THỨC
+          </div>
+        </div>
+        <h3 class="font-display-lg text-headline-sm mb-3 group-hover:text-sauce-amber transition-colors"
+          href="./news.html">
+          Bí quyết món Vịt Khía Nước Dừa đậm đà bản sắc Miền Trung
+        </h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-2">
+          Sự kết hợp giữa vị ngọt của nước dừa và mặn mòi của nước mắm Đề Ghi
+          tạo nên một món ăn không thể chối từ...
+        </p>
+        <div class="mt-4 flex items-center gap-2 font-label-caps text-[11px] text-on-surface-variant">
+          <span class="material-symbols-outlined text-sm">schedule</span>
+          15/10/2023
+        </div>
+      </article>
+      <article class="group cursor-pointer">
+        <div class="overflow-hidden mb-6 relative">
+          <img alt="Xôi xá xíu thơm lừng"
+            class="w-full aspect-[1.36] object-cover transform group-hover:scale-105 transition-transform duration-700"
+            src="./assets/images/cach-nau-xoi-xa-xiu-ngon-don-gian-tai-nha-800.jpg" />
+          <div class="absolute top-4 left-4 bg-parchment-white px-3 py-1 font-label-caps text-[10px]">
+            MẸO HAY
+          </div>
+        </div>
+        <h3 class="font-display-lg text-headline-sm mb-3 group-hover:text-sauce-amber transition-colors">
+          Cách làm nước sốt Xá Xíu chuẩn vị với nước mắm truyền thống
+        </h3>
+        <p class="font-body-md text-on-surface-variant line-clamp-2">
+          Nước mắm 40N Đề Gi là "chìa khóa" giúp món xá xíu của bạn có màu sắc
+          đẹp và hương thơm quyến rũ...
+        </p>
+        <div class="mt-4 flex items-center gap-2 font-label-caps text-[11px] text-on-surface-variant">
+          <span class="material-symbols-outlined text-sm">schedule</span>
+          10/10/2023
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Footer -->
+  <section class="py-24 px-margin-desktop bg-parchment-white" id="lien-he-section">
+    <div class="max-w-container-max mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="font-display-lg text-display-lg text-primary mb-4">
+          Liên Hệ
+        </h2>
+        <div class="w-24 h-1 bg-imperial-gold mx-auto"></div>
+      </div>
+      <div
+        class="max-w-2xl mx-auto bg-surface-container-lowest p-8 md:p-12 rounded-xl shadow-sm border border-surface-variant">
+        <form class="space-y-6">
+          <div>
+            <label class="block font-bold text-ebony-wood mb-2" for="name">Họ và tên</label>
+            <input
+              class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-imperial-gold focus:ring-1 focus:ring-imperial-gold outline-none transition-all bg-white"
+              id="name" placeholder="Nhập tên của bạn" type="text" />
+          </div>
+          <div>
+            <label class="block font-bold text-ebony-wood mb-2" for="email">Email</label>
+            <input
+              class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-imperial-gold focus:ring-1 focus:ring-imperial-gold outline-none transition-all bg-white"
+              id="email" placeholder="Nhập email" type="email" />
+          </div>
+          <div>
+            <label class="block font-bold text-ebony-wood mb-2" for="message">Lời nhắn</label>
+            <textarea
+              class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-imperial-gold focus:ring-1 focus:ring-imperial-gold outline-none transition-all bg-white resize-none"
+              id="message" placeholder="Bạn cần hỗ trợ gì?" rows="4"></textarea>
+          </div>
+          <button
+            class="bg-primary text-on-primary px-8 py-3 rounded-full font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
+            type="submit">
+            Gửi tin nhắn
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+  <footer
+    class="bg-ebony-wood text-parchment-white border-t border-imperial-gold/20 pt-20 pb-8 overflow-hidden relative">
+    <div
+      class="absolute top-0 right-0 w-96 h-96 bg-primary rounded-full opacity-10 blur-[100px] -translate-y-1/2 translate-x-1/2">
+    </div>
+    <div class="max-w-container-max mx-auto px-margin-desktop relative z-10">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+        <div class="md:col-span-2">
+          <div class="font-display-lg text-headline-md text-imperial-gold mb-8">
+            Nước Mắm Đông Hải
+          </div>
+          <p class="text-parchment-white/60 mb-8 max-w-md leading-relaxed">
+            Mang trong mình sứ mệnh gìn giữ và lan tỏa hương vị nước mắm nhĩ
+            truyền thống, Đông Hải tự hào là người bạn đồng hành trong mỗi bữa
+            cơm sum vầy của người Việt.
+          </p>
+          <div class="flex gap-4">
+            <a class="w-10 h-10 border border-parchment-white/20 rounded-full flex items-center justify-center hover:border-imperial-gold hover:text-imperial-gold transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-sm">public</span>
+            </a>
+            <a class="w-10 h-10 border border-parchment-white/20 rounded-full flex items-center justify-center hover:border-imperial-gold hover:text-imperial-gold transition-colors"
+              href="#">
+              <span class="material-symbols-outlined text-sm">mail</span>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h5 class="font-label-caps text-label-caps text-imperial-gold mb-6">
+            Liên hệ Đông Hải
+          </h5>
+          <ul class="space-y-4 text-parchment-white/80">
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-imperial-gold text-lg">location_on</span>
+              <span class="">Làng chài Đề Gi, Phù Cát, Bình Định</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-imperial-gold text-lg">call</span>
+              <span class="">0396.264.034</span>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-imperial-gold text-lg">mail</span>
+              <span class="">Truong@nuocmamdeghi.vn</span>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h5 class="font-label-caps text-label-caps text-imperial-gold mb-6">
+            Liên kết nhanh
+          </h5>
+          <ul class="space-y-4">
+            <li class="">
+              <a class="text-parchment-white/60 hover:text-imperial-gold transition-colors" href="#">Sản phẩm</a>
+            </li>
+            <li class="">
+              <a class="text-parchment-white/60 hover:text-imperial-gold transition-colors" href="#">Đại lý</a>
+            </li>
+            <li class="">
+              <a class="text-parchment-white/60 hover:text-imperial-gold transition-colors" href="#">Chính sách bảo
+                mật</a>
+            </li>
+            <li class="">
+              <a class="text-parchment-white/60 hover:text-imperial-gold transition-colors" href="#">Điều khoản sử
+                dụng</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div
+        class="border-t border-parchment-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-parchment-white/40 text-caption font-caption gap-4">
+        <p class="">
+          © 2026 Nước Mắm Truyền Thống Đông Hải. Tinh hoa từ biển cả.
+        </p>
+        <div class="flex gap-8">
+          <span class="">Designed by Truong Ho</span>
+          <span class="">Hàng Việt Nam Chất Lượng Cao</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- Floating Action Button (FAB) - For Home/Main actions -->
+  <button id="cart-button"
+    class="fixed bottom-8 right-8 bg-imperial-gold text-ebony-wood p-4 rounded-full shadow-2xl hover:scale-110 transition-transform active:scale-95 z-40 group">
+    <span class="material-symbols-outlined text-2xl group-hover:rotate-12 transition-transform">shopping_cart</span>
+    <span
+      class="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-ebony-wood text-parchment-white px-4 py-2 rounded font-label-caps text-[10px] whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">Đặt
+      hàng ngay</span>
+  </button>
+  <div class="cart-sidebar w-full md:w-[400px]" role="dialog" aria-modal="true" id="cart-sidebar">
+    <div class="cart-header flex justify-between items-center p-6 border-b border-imperial-gold/20">
+      <h3 class="text-xl font-bold text-[#4B2E2E]">Giỏ hàng của bạn</h3>
+      <div class="cart-close cursor-pointer" id="cart-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x"
+          aria-hidden="true" class="lucide lucide-x">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </div>
+    </div>
+    <div class="cart-items flex-1 overflow-y-auto p-5" id="cart-items">
+      <p class="text-center mt-5">Giỏ hàng trống</p>
+    </div>
+    <div class="cart-footer p-5 border-t border-gray-200">
+      <div class="cart-total flex justify-between text-2xl font-bold mb-5">
+        <span>Tổng cộng:</span>
+        <span id="cart-total-price">0&nbsp;₫</span>
+      </div>
+      <button
+        class="w-full block bg-[#4B2E2E] text-white py-3 px-[30px] rounded-[50px] font-semibold cursor-pointer transition-[var(--transition)] border-none text-center hover:bg-[#3a2424] hover:-translate-y-[3px] hover:shadow-[0_5px_15px_rgba(75,46,46,0.3)]"
+        id="checkout-btn">
+        Thanh toán ngay
+      </button>
+    </div>
+  </div>
+  <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-[1500] hidden" id="overlay"></div>
+  <script>
     // JavaScript for FAB and Cart Sidebar
-    $(document).ready(function () { 
-      $('#cart-button').on('click', function () { 
-          $('#cart-sidebar').toggleClass('active'); 
-          $('#overlay').toggleClass('hidden'); 
-      }); 
+    $(document).ready(function () {
+      $('#cart-button').on('click', function () {
+        $('#cart-sidebar').toggleClass('active');
+        $('#overlay').toggleClass('hidden');
+      });
 
-      $('#cart-close, #overlay').on('click', function () { 
-          $('#cart-sidebar').removeClass('active'); 
-          $('#overlay').addClass('hidden'); 
-      }); 
+      $('#cart-close, #overlay').on('click', function () {
+        $('#cart-sidebar').removeClass('active');
+        $('#overlay').addClass('hidden');
+      });
 
       $
     });
-    </script>
-  </body>
+  </script>
+</body>
+
 </html>
