@@ -153,6 +153,10 @@
       scroll-behavior: smooth;
     }
 
+    body {
+      transition: opacity ease-in 0.2s;
+    }
+
     .material-symbols-outlined {
       font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
     }
@@ -184,13 +188,51 @@
       right: 0;
     }
 
+    .notification {
+      position: fixed;
+      bottom: 30px;
+      left: 50%;
+      transition: all 0.3s ease-in-out;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .product-modal {
+      position: fixed;
+      top: 10%; 
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      transition: all 0.3s ease-in-out;
+      padding: 12px 25px;
+      border-radius: 50px;
+      font-weight: 600;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .fade-in {
+      transform: translateX(0%) translateY(-10%);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
     .checkmark {
       width: 80px;
       height: 80px;
       border-radius: 50%;
       display: block;
       stroke-width: 4;
-      stroke: #4caf50;
+      stroke: #4caf50; /* Green color for the circle outline */
       stroke-miterlimit: 10;
       box-shadow: inset 0px 0px 0px #4caf50;
       animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s toggle;
@@ -211,7 +253,7 @@
       stroke-dasharray: 48;
       stroke-dashoffset: 48;
       stroke-width: 4;
-      stroke: #fff;
+      stroke: #4caf50; /* White color for the actual checkmark line */
       fill: none;
       animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
     }
@@ -386,11 +428,11 @@
           <p class="text-parchment-white/60 mb-6 font-body-md">
             Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.
           </p>
-          <button
+          <button id="detail-43N"
             class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
             Chi tiết
           </button>
-          <button
+          <button id="add-to-cart-43N"
             class="w-full border border-imperial-gold text-imperial-gold py-3 my-4 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
             Thêm vào giỏ hàng
           </button>
@@ -412,11 +454,11 @@
           <p class="text-parchment-white/60 mb-6 font-body-md">
             Hương vị cân bằng hoàn hảo, phù hợp cho mọi bữa cơm gia đình.
           </p>
-          <button
+          <button id="detail-40N"
             class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
             Chi tiết
           </button>
-          <button
+          <button id="add-to-cart-40N"
             class="w-full border border-imperial-gold text-imperial-gold py-3 my-4 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
             Thêm vào giỏ hàng
           </button>
@@ -438,11 +480,11 @@
           <p class="text-parchment-white/60 mb-6 font-body-md">
             Màu hổ phách trong trẻo, mặn mòi hương vị biển khơi.
           </p>
-          <button
+          <button id="detail-35N"
             class="w-full border border-imperial-gold text-imperial-gold py-3 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
             Chi tiết
           </button>
-          <button
+          <button id="add-to-cart-35N"
             class="w-full border border-imperial-gold text-imperial-gold py-3 my-4 font-label-caps text-label-caps hover:bg-imperial-gold hover:text-ebony-wood transition-colors">
             Thêm vào giỏ hàng
           </button>
@@ -723,10 +765,43 @@
       </button>
     </div>
   </div>
+  <!-- Product detail modal -->
+  <div class="product-modal" id="product-modal">
+    <div class="bg-surface-container-lowest p-8 rounded-lg shadow-lg max-w-lg mx-auto mt-40 text-center">
+      <div class="flex flex-row justify-between justify-center items-center mb-4">
+        <h2 class="flex text-2xl font-display-lg mb-4">Nước mắm Đông Hải 43N 
+          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 ml-4 font-label-caps text-[8px]">
+            HẠNG THƯỢNG HẠNG
+          </span>
+        </h2>
+        <svg class="lucide lucide-x hover:text-imperial-gold hover:cursor-pointer transition-colors relative bottom-2" id="product-modal-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+      </div>
+      <div class="grid grid-cols-2 gap-8">
+        <div>
+          <img alt="Hình ảnh chi tiết sản phẩm" class="w-full h-full object-cover rounded-lg shadow-md"
+            src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" />  
+        </div>
+        <div class="text-left flex flex-col">
+          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary mb-4" id="product-price">1.000.000 ₫</span></h3>
+          <p class="mb-6">Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.</p>
+          <button
+            class="w-full mt-auto bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
+            id="add-to-cart-btn">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <!-- Add to cart Modal  -->
+  <div class="notification rounded-full shadow-lg bg-white" id="notification">
+        Đã thêm vào giỏ hàng!
+  </div>
   <!-- Contact Modal -->
   <div class="fixed top-0 left-0 w-full h-full z-[2000] hidden" id="contact-modal">
     <div class="bg-surface-container-lowest p-8 rounded-lg shadow-lg max-w-sm mx-auto mt-40 text-center">
-      <div class="success-animation">
+      <div class="success-animation flex items-center justify-center mb-6">
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
           <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
           <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
@@ -741,7 +816,6 @@
       </button>
     </div>
   </div>
-  <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-[1500] hidden" id="contact-overlay"></div>
   <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-[1500] hidden" id="overlay"></div>
   <script>
     // JavaScript for FAB and Cart Sidebar
@@ -759,12 +833,31 @@
       $('#contact-submit-button').on('click', function (e) {
         e.preventDefault();
         $('#contact-modal').removeClass('hidden');
-        $('#contact-overlay').removeClass('hidden');
+        $('#overlay').removeClass('hidden');
       });
 
-      $('#contact-modal').on('click', function (e) {
+      $('#contact-modal, #overlay').on('click', function (e) {
         $(this).addClass('hidden');
-        $('#contact-overlay').addClass('hidden');
+        $('#overlay').addClass('hidden');
+
+        $('form')[0].reset();
+      });
+
+      $('#add-to-cart-43N, #add-to-cart-40N, #add-to-cart-35N').on('click', function () {
+        $('#notification').addClass('fade-in');
+        setTimeout(function () {
+          $('#notification').removeClass('fade-in');
+        }, 3000);
+      });
+
+      $('#detail-43N, #detail-40N, #detail-35N').on('click', function () {
+        $('#product-modal').addClass('fade-in');
+        $('#overlay').removeClass('hidden');
+      });
+
+      $('#product-modal-close, #overlay').on('click', function () {
+        $('#product-modal').removeClass('fade-in');
+        $('#overlay').addClass('hidden');
       });
     });
   </script>
