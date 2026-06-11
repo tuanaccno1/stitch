@@ -152,12 +152,42 @@
       }
     </script>
   <style>
+    :root {
+      --parchment-white: #F9F6F0;
+      --imperial-gold: #FCBE00;
+      --primary: #500001;
+
+      --parchment-white-80: rgba(249, 246, 240, 0.8);
+    }
+
     html {
       scroll-behavior: smooth;
     }
 
     body {
       transition: opacity ease-in 0.2s;
+    }
+  
+    .nav-link {
+      font-size: 1rem;
+      line-height: 1.5rem;
+      color: var(--parchment-white-80);
+      transition: color 0.15s ease-in-out;
+
+      transition-property: color, background-color, border-color, text-decoration-color, fill, stroke;
+      transition-duration: 150ms;    
+    }
+
+    .nav-link:hover {
+      color: var(--imperial-gold);
+    }
+
+    .nav-link.active {
+      color: var(--imperial-gold); 
+      border-bottom-width: 2px;
+      border-bottom-style: solid;
+      border-color: var(--imperial-gold);
+      padding-bottom: 0.25rem;
     }
 
     .material-symbols-outlined {
@@ -187,6 +217,21 @@
       flex-direction: column;
     }
 
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: var(--primary);
+      z-index: 2000;
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease-in-out;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mobile-menu.active,
     .cart-sidebar.active {
       right: 0;
     }
@@ -194,7 +239,6 @@
     .notification {
       position: fixed;
       bottom: 30px;
-      left: 50%;
       transition: all 0.3s ease-in-out;
       padding: 12px 25px;
       border-radius: 50px;
@@ -207,7 +251,7 @@
 
     .modal {
       position: fixed;
-      top: 0;
+      top: 10%;
       left: 0;
       width: 100%;
       height: 100%;
@@ -223,6 +267,13 @@
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
+    }
+
+    .modal-container {
+      max-height: 100%;
+      max-width: 100%;
+
+      overflow-y: auto;
     }
 
     .fade-in {
@@ -289,6 +340,7 @@
         transform: scale3d(1.1, 1.1, 1);
       }
     }
+
   </style>
 </head>
 
@@ -296,62 +348,61 @@
   <!-- Top Navigation Bar -->
   <nav
     class="flex bg-primary justify-between items-center px-margin-desktop py-4 w-full sticky top-0 z-50 border-b border-imperial-gold/30 shadow-sm">
-    <div class="font-display-lg text-headline-sm text-imperial-gold uppercase tracking-widest">
+    <div class="flex flex-row items-center font-display-lg text-headline-sm text-imperial-gold uppercase tracking-widest">
       <img alt="Logo Nước Mắm Đề Ghi"
-        class="w-12 h-12 inline-block mr-2 rounded-[100%] object-cover border-2 border-imperial-gold"
+        class="w-16 h-16 inline-block mr-2 rounded-[100%] object-cover border-2 border-imperial-gold"
         src="https://preview.redd.it/4-types-of-noelle-fanart-v0-1hqnmy1ftz5h1.jpeg?width=959&format=pjpg&auto=webp&s=074639200d7b310f4f0e4cb01fb54dca679d4e2e" />
-      Nước Mắm Đông hải
+      <span>Nước Mắm Đông hải</span>
     </div>
     <div class="hidden lg:flex items-center space-x-8">
-      <a class="font-body-md text-body-md text-imperial-gold border-b-2 border-imperial-gold pb-1" href="#">Giới
+      <a class="nav-link" href="#Introduction">Giới
         thiệu</a>
-      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+      <a class="nav-link"
         href="#Product">Sản phẩm</a>
-      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+      <a class="nav-link"
         href="#Process">Quy trình</a>
-      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+      <a class="nav-link"
         href="#News">Tin tức</a>
-      <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
-        href="#lien-he-section">Liên hệ</a>
+      <a class="nav-link"
+        href="#Contact">Liên hệ</a>
     </div>
     <div class="flex space-x-4">
       <button
-        class="bg-sauce-amber text-parchment-white px-6 py-2 font-label-caps text-label-caps rounded-lg hover:bg-aged-terracotta transition-all duration-300">
+        class="hidden md:block bg-sauce-amber text-parchment-white px-6 py-2 font-label-caps text-label-caps rounded-lg hover:bg-aged-terracotta transition-all duration-300">
         Mua ngay
       </button>
       <button class="lg:hidden text-imperial-gold focus:outline-none" id="mobile-menu-button"
-        aria-label="Mở menu di động" onclick="$('#mobile-menu-overlay');">
+        aria-label="Mở menu di động">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
   </nav>
+
   <!-- Mobile Menu -->
-  <div class="fixed inset-0 bg-ebony-wood/80 backdrop-blur-sm z-40 hidden" id="mobile-menu-overlay"></div>
   <div
-    class="fixed top-0 right-0 w-64 h-full bg-ebony-wood text-parchment-white z-50 transform translate-x-full transition-transform duration-300"
+    class="mobile-menu"
     id="mobile-menu">
     <div class="p-6">
-      <button class="text-parchment-white focus:outline-none mb-8" id="mobile-menu-close" aria-label="Đóng menu di động"
-        onclick="$('#mobile-menu-overlay').addClass('hidden'); $('#mobile-menu').removeClass('translate-x-full');">
+      <button class="text-parchment-white focus:outline-none mb-8 hover:text-imperial-gold transition-colors" id="mobile-menu-close" aria-label="Đóng menu di động">
         <span class="material-symbols-outlined">close</span>
       </button>
       <nav class="flex flex-col space-y-6">
-        <a class="font-body-md text-body-md text-imperial-gold border-b-2 border-imperial-gold pb-1" href="#">Giới
-          thiệu</a>
-        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        <a class="nav-link"
+          href="#Introduction">Giới thiệu</a>
+        <a class="nav-link"
           href="#Product">Sản phẩm</a>
-        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        <a class="nav-link"
           href="#Process">Quy trình</a>
-        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
+        <a class="nav-link"
           href="#News">Tin tức</a>
-        <a class="font-body-md text-body-md text-parchment-white/80 hover:text-imperial-gold transition-colors"
-          href="#lien-he-section">Liên hệ</a>
+        <a class="nav-link"
+          href="#Contact">Liên hệ</a>
       </nav>
     </div>
   </div>
 
   <!-- Hero Section -->
-  <header class="relative w-full h-[85vh] flex items-center overflow-hidden">
+  <section id="Introduction" class="relative w-full h-[85vh] flex items-center overflow-hidden">
     <div class="absolute inset-0 z-0">
       <img alt="Nước Mắm Đề Ghi Banner" class="w-full h-full object-cover"
         src="./assets/images/vietgoing_puw2103111501.webp" />
@@ -375,7 +426,7 @@
         <div class="flex gap-4"></div>
       </div>
     </div>
-  </header>
+  </section>
   <!-- Heritage Section -->
   <section class="py-24 px-margin-desktop max-w-container-max mx-auto relative">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -416,7 +467,7 @@
     </div>
   </section>
   <!-- Featured Products -->
-  <section class="bg-ebony-wood py-24 relative overflow-hidden" id="Product">
+  <section id='Product' class="bg-ebony-wood py-24 relative overflow-hidden" id="Product">
     <div class="absolute inset-0 bg-noise pointer-events-none"></div>
     <div class="px-margin-desktop max-w-container-max mx-auto relative z-10">
       <div class="text-center mb-16">
@@ -512,7 +563,7 @@
     </div>
   </section>
   <!-- Process Section -->
-  <section class="py-24 bg-surface relative" id="Process">
+  <section id="Process" class="py-24 bg-surface relative" id="Process">
     <div class="px-margin-desktop max-w-container-max mx-auto">
       <div class="flex flex-col md:flex-row items-center gap-16">
         <div class="w-full md:w-1/2">
@@ -573,7 +624,7 @@
     </div>
   </section>
   <!-- News & Tips Section -->
-  <section class="py-24 px-margin-desktop max-w-container-max mx-auto" id="News">
+  <section id='News' class="py-24 px-margin-desktop max-w-container-max mx-auto" id="News">
     <div class="flex justify-between items-end mb-12">
       <div>
         <span class="font-label-caps text-label-caps text-sauce-amber block mb-2">Chia sẻ &amp; Cảm hứng</span>
@@ -630,7 +681,7 @@
     </div>
   </section>
   <!-- Footer -->
-  <section class="py-24 px-margin-desktop bg-parchment-white" id="lien-he-section">
+  <section id='Contact' class="py-24 px-margin-desktop bg-parchment-white" id="lien-he-section">
     <div class="max-w-container-max mx-auto">
       <div class="text-center mb-12">
         <h2 class="font-display-lg text-display-lg text-primary mb-4">
@@ -785,11 +836,11 @@
   </div>
   <!-- Product detail modal -->
   <div class="modal" id="product-modal">
-    <div class="bg-surface-container-lowest p-8 rounded-full shadow-lg max-w-lg mx-auto mt-40 text-center">
-      <div class="flex flex-row justify-between justify-center items-center mb-4">
-        <h2 class="flex text-2xl font-display-lg mb-4">
+    <div class="modal-container bg-surface-container-lowest p-8 rounded-full shadow-lg max-w-lg mx-auto text-center">
+      <div class="flex flex-row justify-between items-center mb-0">
+        <h2 class="flex flex-col md:flex-row text-2xl font-display-lg mb-4">
           <span id="product-name">Nước mắm Đông Hải 43N</span>
-          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 ml-4 font-label-caps text-[12px]"
+          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 md:ml-4 font-label-caps text-[12px]"
             id="product-class">
             HẠNG THƯỢNG HẠNG
           </span>
@@ -822,9 +873,9 @@
   </div>
   </div>
   <!-- Confirm payment modal -->
-  <div class="modal top-[5%]" id="payment-confirm-modal">
+  <div class="modal" id="payment-confirm-modal">
     <div
-      class="bg-white shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto rounded-full border border-outline-variant focus:border-imperial-gold">
+      class="modal-container bg-white shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto rounded-full border border-outline-variant focus:border-imperial-gold">
       <div class="p-8">
         <div class="flex justify-between">
           <h2 class="flex text-3xl font-display-lg mb-4">Thông tin đặt hàng</h2>
@@ -892,7 +943,7 @@
   </div>
   <!-- Payment success modal -->
   <div class="modal" id="success-modal">
-    <div class="bg-white shadow-lg rounded-full p-8">
+    <div class="modal-container bg-white shadow-lg rounded-full p-8">
       <div class="modal-header">
         <div class="success-animation flex items-center justify-center mb-6">
           <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
@@ -909,11 +960,11 @@
           <div class="p-4 bg-imperial-gold/10 rounded-full">
             <h4 class="text-xl font-garamond mb-2">Chi tiết đơn hàng</h4>
 
-            <div class="text-sm">Họ và tên: <span id="payment-success-name"></span></div>
-            <div class="text-sm">Số điện thoại: <span id="payment-success-phone"></span></div>
-            <div class="text-sm">Địa chỉ giao hàng: <span id="payment-success-address"></span></div>
+            <div class="text-sm"><strong>Họ và tên: </strong><span id="payment-success-name"></span></div>
+            <div class="text-sm"><strong>Số điện thoại: </strong><span id="payment-success-phone"></span></div>
+            <div class="text-sm"><strong>Địa chỉ giao hàng: </strong><span id="payment-success-address"></span></div>
 
-            <h4 class="text-xl font-garamond mt-2">Danh sách đơn hàng</h4>
+            <h4 class="text-lg font-garamond my-2">Danh sách đơn hàng</h4>
             <div id="payment-success-order-list">
               <div class="flex justify-between text-sm">
                 <span>Tên sản phẩm</span>
@@ -926,7 +977,7 @@
                 <span id="payment-success-price">0 ₫</span>
               </div>
             </div>
-            <div class="flex justify-between text-sm hidden my-2">
+            <div class="flex justify-between text-sm my-2">
               <span>Giảm giá:</span>
               <span id="payment-success-discount"> - 0 đ</span>
             </div>
@@ -943,9 +994,12 @@
     </div>
   </div>
   <!-- Add to cart modal  -->
-  <div class="notification rounded-full shadow-lg bg-white" id="notification">
-    Đã thêm vào giỏ hàng!
+  <div class="flex justify-center">
+    <div class="notification rounded-full shadow-lg bg-white" id="notification">
+      Đã thêm vào giỏ hàng!
+    </div>
   </div>
+  
   <!-- Contact Modal -->
   <div class="fixed top-0 left-0 w-full h-full z-[2000] hidden" id="contact-modal">
     <div class="bg-surface-container-lowest p-8 rounded-lg shadow-lg max-w-sm mx-auto mt-40 text-center">
@@ -1168,7 +1222,6 @@
         `);
       });
 
-      // FIXED: Formatted values cleanly with toLocaleString()
       $('#order-total-price').text(totalPrice().toLocaleString() + ' ₫');
 
       if ($('#discount-display').hasClass('hidden')) {
@@ -1183,7 +1236,7 @@
       let name = $('#checkout-name').val();
       let phone = $('#checkout-phone').val();
       let address = $('#checkout-address').val();
-      let listDOM = $('#order-summary-list').text();
+      let listDOM = $('#order-summary-list');
       let price = $('#order-total-price').text();
       let discount = $('#discount-amount').text();
       let finalPrice = $('#final-price').text();
@@ -1191,7 +1244,7 @@
       $('#payment-success-name').text(name);
       $('#payment-success-phone').text(phone);
       $('#payment-success-address').text(address);
-      $('#payment-success-order-list').text(listDOM);
+      $('#payment-success-order-list').empty().append(listDOM);
       $('#payment-success-price').text(price);
       $('#payment-success-discount').text(discount);
       $('#payment-success-final-price').text(finalPrice);
@@ -1249,9 +1302,52 @@
 
     // jQuery Logic Pipeline
     $(document).ready(function () {
+
+      // 1. Grab all section elements and navigation link items
+      const sections = document.querySelectorAll("section[id]");
+      const navLinks = document.querySelectorAll(".nav-link");
+
+      // 2. Configure the observer options
+      const observerOptions = {
+        root: null, // viewport
+        rootMargin: "-20% 0px -60% 0px", // Triggers when a section fills the upper-middle of screen
+        threshold: 0
+      };
+
+      // 3. Create the Scroll Spy observer logic
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute("id");
+            
+            // Remove 'active' class from all links
+            navLinks.forEach((link) => link.classList.remove("active"));
+            
+            // Add 'active' class to the matching link
+            const activeLink = document.querySelector(`.nav-link[href="#${id}"]`);
+            if (activeLink) {
+              activeLink.classList.add("active");
+            }
+          }
+        });
+      }, observerOptions);
+
+      // 4. Track all sections
+      sections.forEach((section) => observer.observe(section));
+
       renderCartSidebar();
 
       // UI Actions
+      $('#mobile-menu-button').on('click', function () {
+        $('#mobile-menu').addClass('active');
+        $('#overlay').removeClass('hidden');
+      });
+
+      $('#mobile-menu-close, #mobile-menu .nav-link').on('click', function () {
+        $('#mobile-menu').removeClass('active');
+        $('#overlay').addClass('hidden');
+      });
+
       $('#cart-button').on('click', function () {
         $('#cart-sidebar').toggleClass('active');
         $('#overlay').toggleClass('hidden');
@@ -1365,10 +1461,12 @@
         }
       });
 
+      // Apply discount
       $('#apply-discount').on('click', function () {
         applyDiscount();
       });
 
+      // After click confirm payment
       $('#payment-btn').on('click', function (e) {
         e.preventDefault();
         $('#payment-confirm-modal').removeClass('fade-in');
@@ -1388,10 +1486,11 @@
 
         renderPaymentSuccess();
 
-        //resetCartCookie();
+        resetCartCookie(); // Delete all products inside the cart
+        renderCartSidebar();
       });
 
-      $('#success-payment-close, #overlay, success-modal').on('click', function() {
+      $('#success-payment-close, #overlay, #success-modal').on('click', function(e) {
         if (e.target === this || e.target.id === 'overlay') {
           $('#success-modal').removeClass('fade-in');
           $('#overlay').addClass('hidden');
