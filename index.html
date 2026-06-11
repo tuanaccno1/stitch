@@ -205,7 +205,7 @@
 
     .product-modal {
       position: fixed;
-      top: 10%; 
+      top: 10%;
       left: 0;
       width: 100%;
       height: 100%;
@@ -233,7 +233,8 @@
       border-radius: 50%;
       display: block;
       stroke-width: 4;
-      stroke: #4caf50; /* Green color for the circle outline */
+      stroke: #4caf50;
+      /* Green color for the circle outline */
       stroke-miterlimit: 10;
       box-shadow: inset 0px 0px 0px #4caf50;
       animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s toggle;
@@ -254,22 +255,34 @@
       stroke-dasharray: 48;
       stroke-dashoffset: 48;
       stroke-width: 4;
-      stroke: #4caf50; /* White color for the actual checkmark line */
+      stroke: #4caf50;
+      /* White color for the actual checkmark line */
       fill: none;
       animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.6s forwards;
     }
 
     @keyframes stroke {
-      100% { stroke-dashoffset: 0; }
+      100% {
+        stroke-dashoffset: 0;
+      }
     }
 
     @keyframes fill {
-      100% { box-shadow: inset 0px 0px 0px 40px #4caf50; }
+      100% {
+        box-shadow: inset 0px 0px 0px 40px #4caf50;
+      }
     }
 
     @keyframes scale {
-      0%, 100% { transform: none; }
-      50% { transform: scale3d(1.1, 1.1, 1); }
+
+      0%,
+      100% {
+        transform: none;
+      }
+
+      50% {
+        transform: scale3d(1.1, 1.1, 1);
+      }
     }
   </style>
 </head>
@@ -279,7 +292,8 @@
   <nav
     class="flex bg-primary justify-between items-center px-margin-desktop py-4 w-full sticky top-0 z-50 border-b border-imperial-gold/30 shadow-sm">
     <div class="font-display-lg text-headline-sm text-imperial-gold uppercase tracking-widest">
-      <img alt="Logo Nước Mắm Đề Ghi" class="w-12 h-12 inline-block mr-2 rounded-[100%] object-cover border-2 border-imperial-gold"
+      <img alt="Logo Nước Mắm Đề Ghi"
+        class="w-12 h-12 inline-block mr-2 rounded-[100%] object-cover border-2 border-imperial-gold"
         src="https://preview.redd.it/4-types-of-noelle-fanart-v0-1hqnmy1ftz5h1.jpeg?width=959&format=pjpg&auto=webp&s=074639200d7b310f4f0e4cb01fb54dca679d4e2e" />
       Nước Mắm Đông hải
     </div>
@@ -301,8 +315,7 @@
         Mua ngay
       </button>
       <button class="lg:hidden text-imperial-gold focus:outline-none" id="mobile-menu-button"
-        aria-label="Mở menu di động"
-        onclick="$('#mobile-menu-overlay');">
+        aria-label="Mở menu di động" onclick="$('#mobile-menu-overlay');">
         <span class="material-symbols-outlined">menu</span>
       </button>
     </div>
@@ -313,8 +326,7 @@
     class="fixed top-0 right-0 w-64 h-full bg-ebony-wood text-parchment-white z-50 transform translate-x-full transition-transform duration-300"
     id="mobile-menu">
     <div class="p-6">
-      <button class="text-parchment-white focus:outline-none mb-8" id="mobile-menu-close"
-        aria-label="Đóng menu di động"
+      <button class="text-parchment-white focus:outline-none mb-8" id="mobile-menu-close" aria-label="Đóng menu di động"
         onclick="$('#mobile-menu-overlay').addClass('hidden'); $('#mobile-menu').removeClass('translate-x-full');">
         <span class="material-symbols-outlined">close</span>
       </button>
@@ -422,7 +434,8 @@
               src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" />
           </div>
           <span
-            class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4">HẠNG THƯỢNG HẠNG</span>
+            class="inline-block bg-imperial-gold/10 text-imperial-gold px-3 py-1 font-label-caps text-[10px] mb-4">HẠNG
+            THƯỢNG HẠNG</span>
           <h3 class="font-display-lg text-headline-sm text-parchment-white mb-2">
             Nước mắm Đông Hải 43N
           </h3>
@@ -537,10 +550,9 @@
         </div>
         <div class="w-full md:w-1/2 relative">
           <div class="rounded-lg overflow-hidden shadow-2xl">
-            <img alt="Quy trình ủ chượp nước mắm"
-            class="w-full h-full object-cover"
-            src="./assets/images/nuoc-mam-nhi-duoc-san-xuat-vo-cung-ti-mi-2.jpeg" />
-          </div> 
+            <img alt="Quy trình ủ chượp nước mắm" class="w-full h-full object-cover"
+              src="./assets/images/nuoc-mam-nhi-duoc-san-xuat-vo-cung-ti-mi-2.jpeg" />
+          </div>
           <!-- The Seal Component -->
           <div
             class="absolute -top-10 -right-10 w-40 h-40 bg-imperial-gold rounded-full flex items-center justify-center p-4 shadow-lg transform rotate-12 border-4 border-ebony-wood">
@@ -770,20 +782,28 @@
   <div class="product-modal" id="product-modal">
     <div class="bg-surface-container-lowest p-8 rounded-lg shadow-lg max-w-lg mx-auto mt-40 text-center">
       <div class="flex flex-row justify-between justify-center items-center mb-4">
-        <h2 class="flex text-2xl font-display-lg mb-4" id="product-name">Nước mắm Đông Hải 43N 
-          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 ml-4 font-label-caps text-[8px]" id="product-class">
+        <h2 class="flex text-2xl font-display-lg mb-4" id="product-name">Nước mắm Đông Hải 43N
+          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 ml-4 font-label-caps text-[8px]"
+            id="product-class">
             HẠNG THƯỢNG HẠNG
           </span>
         </h2>
-        <svg class="lucide lucide-x hover:text-imperial-gold hover:cursor-pointer transition-colors relative bottom-2" id="product-modal-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
+        <svg class="lucide lucide-x hover:text-imperial-gold hover:cursor-pointer transition-colors relative bottom-2"
+          id="product-modal-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          data-lucide="x" aria-hidden="true">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
       </div>
       <div class="flex flex-col md:flex-row gap-6">
         <div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-2xl">
           <img alt="Hình ảnh chi tiết sản phẩm" class="w-full h-full object-cover rounded-lg shadow-md"
-            src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" />  
+            src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" />
         </div>
         <div class="text-left flex flex-col">
-          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary  mb-4" id="product-price">1.000.000 ₫</span></h3>
+          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary  mb-4"
+              id="product-price">1.000.000 ₫</span></h3>
           <p class="mb-6" id="product-description">Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.</p>
           <button
             class="w-full mt-auto bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
@@ -792,20 +812,78 @@
           </button>
         </div>
       </div>
+    </div>
+  </div>
+  </div>
+  <!-- Confirm payment modal -->
+  <div class="modal-content bg-white rounded-lg shadow-xl max-w-md w-full max-h-[90vh] overflow-y-auto">
+
+    <div class="modal-header flex items-center justify-between border-b p-4">
+      <h3 class="text-lg font-bold text-gray-900">Xác nhận thanh toán</h3>
+      <div class="modal-close cursor-pointer p-1 text-gray-400 hover:text-gray-600" id="payment-modal-close">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-x">
+          <line x1="18" x2="6" y1="6" y2="18"></line>
+          <line x1="6" x2="18" y1="6" y2="18"></line>
+        </svg>
       </div>
     </div>
+
+    <div class="p-6 space-y-6">
+      <div class="bg-amber-50 border border-amber-200 rounded-lg p-4 text-center">
+        <p class="text-sm text-amber-800 font-medium">Số tiền cần thanh toán</p>
+        <p class="text-2xl font-black text-amber-900 mt-1" id="final-payment-price">3.430.000 ₫</p>
+      </div>
+
+      <div class="space-y-3">
+        <h4 class="font-bold text-sm text-gray-700 uppercase tracking-wider">Thông tin chuyển khoản</h4>
+        <div class="bg-gray-50 rounded-lg p-4 text-sm space-y-2 border border-gray-100">
+          <div class="flex justify-between"><span class="text-gray-500">Ngân hàng:</span> <strong
+              class="text-gray-800">Vietcombank</strong></div>
+          <div class="flex justify-between"><span class="text-gray-500">Số tài khoản:</span> <strong
+              class="text-gray-800">1023456789</strong></div>
+          <div class="flex justify-between"><span class="text-gray-500">Chủ tài khoản:</span> <strong
+              class="text-gray-800">CTY NUOC MAM DONG HAI</strong></div>
+          <div class="flex flex-col pt-1 border-t border-gray-200 mt-2">
+            <span class="text-gray-500 mb-1">Nội dung chuyển khoản:</span>
+            <strong class="text-amber-800 bg-amber-100/60 px-2 py-1 rounded text-center font-mono tracking-wide"
+              id="payment-memo">DH-0123456789</strong>
+          </div>
+        </div>
+      </div>
+
+      <div class="space-y-2">
+        <label class="block text-sm font-medium text-gray-700">Tải lên hình ảnh biên lai (nếu có)</label>
+        <input type="file" id="payment-receipt" accept="image/*"
+          class="w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-amber-50 file:text-amber-700 hover:file:bg-amber-100 cursor-pointer">
+      </div>
+
+      <p class="text-xs text-gray-400 text-center italic">Vui lòng hoàn tất chuyển khoản trước khi nhấn xác nhận hoàn
+        tất đơn hàng.</p>
+    </div>
+
+    <div class="border-t p-4 flex gap-3 bg-gray-50 rounded-b-lg">
+      <button type="button" id="btn-payment-back"
+        class="w-1/3 py-2.5 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-md hover:bg-gray-50 transition-colors">Quay
+        lại</button>
+      <button type="button" id="btn-payment-complete"
+        class="w-2/3 py-2.5 text-sm font-semibold text-white bg-red-800 hover:bg-red-900 rounded-md shadow transition-colors">Hoàn
+        tất đơn hàng</button>
+    </div>
+
+  </div>
   </div>
   <!-- Add to cart Modal  -->
   <div class="notification rounded-full shadow-lg bg-white" id="notification">
-        Đã thêm vào giỏ hàng!
+    Đã thêm vào giỏ hàng!
   </div>
   <!-- Contact Modal -->
   <div class="fixed top-0 left-0 w-full h-full z-[2000] hidden" id="contact-modal">
     <div class="bg-surface-container-lowest p-8 rounded-lg shadow-lg max-w-sm mx-auto mt-40 text-center">
       <div class="success-animation flex items-center justify-center mb-6">
         <svg class="checkmark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52">
-          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none"/>
-          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          <circle class="checkmark__circle" cx="26" cy="26" r="25" fill="none" />
+          <path class="checkmark__check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8" />
         </svg>
       </div>
       <h2 class="text-2xl font-bold mb-4">Cảm ơn bạn đã liên hệ!</h2>
@@ -824,10 +902,10 @@
       let product = {};
 
       switch (productId) {
-        case '43N': 
+        case '43N':
           product['id'] = '43N';
           product['name'] = 'Nước mắm Đông Hải 43N';
-          product['price'] = 1000000;
+          product['price'] = 43000;
           product['image'] = './assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png';
           product['description'] = 'Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.';
           product['class'] = 'HẠNG THƯỢNG HẠNG';
@@ -835,7 +913,7 @@
         case '40N':
           product['id'] = '40N';
           product['name'] = 'Nước mắm Đông Hải 40N';
-          product['price'] = 800000;
+          product['price'] = 40000;
           product['image'] = './assets/images/z7890083636863_d541172f5eb8e0310144e0e5789ee7ff.jpg';
           product['description'] = 'Hương vị cân bằng hoàn hảo, phù hợp cho mọi bữa cơm gia đình.';
           product['class'] = 'HẠNG ĐẶC BIỆT';
@@ -843,7 +921,7 @@
         case '35N':
           product['id'] = '35N';
           product['name'] = 'Nước mắm Đông Hải 35N';
-          product['price'] = 600000;
+          product['price'] = 35000;
           product['image'] = './assets/images/z7890085109257_c6f8ba663e0f4b3ab5a42cb475ec287c.jpg';
           product['description'] = 'Màu hổ phách trong trẻo, mặn mòi hương vị biển khơi.';
           product['class'] = 'HẠNG NGUYÊN CHẤT';
@@ -869,7 +947,7 @@
     function getCartCookie() {
       const cookieValue = Cookies.get('shopping_cart');
       if (!cookieValue) return [];
-      
+
       try {
         const parsed = JSON.parse(cookieValue);
         return Array.isArray(parsed) ? parsed : [];
@@ -882,10 +960,10 @@
     // Add a product to the cart
     function addProduct(productId, productName = null, productPrice = null, productImage = null) {
       const cart = getCartCookie();
-      
+
       // FIXED: Changed `id === productId` to `item.id === productId`
       let existingItem = cart.find(item => item.id === productId);
-      
+
       if (existingItem) {
         existingItem.quantity += 1;
       } else {
@@ -900,7 +978,7 @@
           quantity: 1
         });
       }
-        
+
       setCartCookie(cart);
       renderCartSidebar();
     }
@@ -917,7 +995,7 @@
         if (existingItem.quantity <= 0) {
           cart = cart.filter(item => item.id !== productId);
         }
-      
+
         setCartCookie(cart);
         renderCartSidebar();
       }
@@ -944,7 +1022,7 @@
     // Render cart items in the sidebar
     function renderCartSidebar() {
       const cart = getCartCookie();
-      const $container = $('#cart-items'); 
+      const $container = $('#cart-items');
       $container.empty();
 
       if (cart.length === 0) {
@@ -1021,21 +1099,21 @@
 
       // Add to cart from Main Page grid items
       $('#add-to-cart-43N, #add-to-cart-40N, #add-to-cart-35N').on('click', function () {
-        const productId = this.id.split('-')[3]; 
+        const productId = this.id.split('-')[3];
         let product;
-      
+
         if (!productId) {
           console.error('Product ID not found for button:', this.id);
           return;
         } else {
           product = getProductById(productId);
-        } 
+        }
 
         addProduct(product.id, product.name, product.price, product.image);
 
         // Toast Notification Trigger
         $('#notification').addClass('fade-in');
-        if(window.notifTimeout) clearTimeout(window.notifTimeout);
+        if (window.notifTimeout) clearTimeout(window.notifTimeout);
         window.notifTimeout = setTimeout(function () {
           $('#notification').removeClass('fade-in');
         }, 3000);
@@ -1046,23 +1124,23 @@
         $('#product-modal').addClass('fade-in');
         $('#overlay').removeClass('hidden');
 
-        const productId = this.id.split('-')[1]; 
+        const productId = this.id.split('-')[1];
         let product;
-      
+
         if (!productId) {
           console.error('Product ID not found for button:', this.id);
           return;
         } else {
           product = getProductById(productId);
-        } 
+        }
 
         // Set values and explicitly track the active product ID inside the modal container layout variables
-        $('#product-price').text(`${product.price.toLocaleString()} ₫`); 
+        $('#product-price').text(`${product.price.toLocaleString()} ₫`);
         // FIXED: Added setting the attribute variable data tracker right here
-        $('#product-name').text(product.name).attr('product-id', product.id);          
-        $('.product-modal img').attr('src', product.image); 
-        $('#product-description').text(product.description); 
-        $('#product-class').text(product.class); 
+        $('#product-name').text(product.name).attr('product-id', product.id);
+        $('.product-modal img').attr('src', product.image);
+        $('#product-description').text(product.description);
+        $('#product-class').text(product.class);
       });
 
       // Close Product Modal
@@ -1077,27 +1155,27 @@
       $('#add-to-cart-btn').on('click', function () {
         const productId = $('#product-name').attr('product-id');
         let product;
-      
+
         if (!productId) {
           console.error('Product ID not found or modal state broken.');
           return;
         } else {
           product = getProductById(productId);
-        } 
+        }
 
         // FIXED: Actually triggers the execution sequence now
         addProduct(product.id, product.name, product.price, product.image);
 
         // Toast Notification Trigger
         $('#notification').addClass('fade-in');
-        if(window.notifTimeout) clearTimeout(window.notifTimeout);
+        if (window.notifTimeout) clearTimeout(window.notifTimeout);
         window.notifTimeout = setTimeout(function () {
           $('#notification').removeClass('fade-in');
         }, 3000);
       });
 
     });
-</script>
+  </script>
 </body>
 
 </html>
