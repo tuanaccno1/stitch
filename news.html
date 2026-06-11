@@ -5,7 +5,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Tin Tức &amp; Blog - Nước mắm Đề Ghi</title>
+  <title>Tin Tức &amp; Blog - Nước mắm Đông Hải</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
   <link
@@ -141,6 +141,18 @@
     };
   </script>
   <style>
+    :root {
+      --parchment-white: #F9F6F0;
+      --imperial-gold: #FCBE00;
+      --primary: #500001;
+
+      --parchment-white-80: rgba(249, 246, 240, 0.8);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background-color: #f9f6f0;
       /* Parchment Background */
@@ -174,6 +186,40 @@
       border-color: #fcbe00;
     }
 
+    .modal {
+      position: fixed;
+      top: 10%;
+      left: 0;
+      width: 100%;
+      height: 100%;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition: all 0.3s ease-in-out;
+
+      border-radius: 50px;
+      z-index: 2000;
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .modal-container {
+      max-height: 100%;
+      max-width: 100%;
+
+      overflow-y: auto;
+    }
+
+    .fade-in {
+      transform: translateX(0%) translateY(-10%);
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto;
+    }
+
     /* Specialized components */
     .the-seal {
       width: 80px;
@@ -202,20 +248,23 @@
   <header class="fixed top-0 z-50 w-full bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
     <nav
       class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto h-20">
-      <div class="text-headline-md font-display-lg text-sauce-amber">
-        Đông Hải
+      <div class="flex flex-row items-center font-display-lg text-headline-sm text-sauce-amber uppercase tracking-widest">
+        <img alt="Logo Nước Mắm Đề Ghi"
+          class="w-16 h-16 inline-block mr-2 rounded-[100%] object-cover border-2 border-sauce-amber"
+          src="https://preview.redd.it/4-types-of-noelle-fanart-v0-1hqnmy1ftz5h1.jpeg?width=959&format=pjpg&auto=webp&s=074639200d7b310f4f0e4cb01fb54dca679d4e2e" />
+        <span>Nước Mắm Đông hải</span>
       </div>
       <div class="hidden md:flex gap-gutter items-center">
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-sauce-amber transition-colors"
-          href="#">Giới thiệu</a>
+          href="./index.html#Introduction">Giới thiệu</a>
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-sauce-amber transition-colors"
-          href="#">Sản Phẩm</a>
+          href="./index.html#Product">Sản Phẩm</a>
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-sauce-amber transition-colors"
-          href="#">Quy Trình</a>
+          href="./index.html#Process">Quy Trình</a>
         <a class="font-label-caps text-label-caps text-sauce-amber border-b-2 border-sauce-amber pb-1 font-bold"
           href="#">Tin tức</a>
         <a class="font-label-caps text-label-caps text-on-surface-variant hover:text-sauce-amber transition-colors"
-          href="#">Liên hệ</a>
+          href="./index.html#Contact">Liên hệ</a>
       </div>
       <a href="./index.html"
         class="bg-sauce-amber text-parchment-white px-6 py-2 font-label-caps text-label-caps hover:scale-105 active:scale-95 transition-all duration-200">
@@ -519,6 +568,43 @@
       </div>
     </div>
   </footer>
+  <!-- Post detail modal -->
+  <div class="modal" id="product-modal">
+    <div class="modal-container bg-surface-container-lowest p-8 rounded-full shadow-lg max-w-lg mx-auto text-center">
+      <div class="flex flex-row justify-between items-center mb-0">
+        <h2 class="flex flex-col md:flex-row text-2xl font-display-lg mb-4">
+          <span id="product-name">Nước mắm Đông Hải 43N</span>
+          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 md:ml-4 font-label-caps text-[12px]"
+            id="product-class">
+            HẠNG THƯỢNG HẠNG
+          </span>
+        </h2>
+        <svg class="lucide lucide-x hover:text-imperial-gold hover:cursor-pointer transition-colors relative bottom-2"
+          id="product-modal-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+          data-lucide="x" aria-hidden="true">
+          <path d="M18 6 6 18"></path>
+          <path d="m6 6 12 12"></path>
+        </svg>
+      </div>
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-2xl">
+          <img alt="Hình ảnh chi tiết sản phẩm" class="w-full h-full object-cover rounded-lg shadow-md"
+            src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" id="product-image" />
+        </div>
+        <div class="text-left flex flex-col">
+          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary  mb-4"
+              id="product-price">43000 ₫</span></h3>
+          <p class="mb-6" id="product-description">Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.</p>
+          <button
+            class="w-full mt-auto bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
+            id="add-to-cart-btn">
+            Thêm vào giỏ hàng
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <script>
     // Micro-interactions
     document.querySelectorAll("button, a").forEach((el) => {
