@@ -7,6 +7,7 @@
   <title>Nước Mắm Đề Ghi - Tinh Hoa Từ Biển Cả</title>
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <script src="https://code.jquery.com/jquery-4.0.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&amp;family=Manrope:wght@400;500;700&amp;display=swap"
     rel="stylesheet" />
@@ -759,7 +760,7 @@
         <span id="cart-total-price">0&nbsp;₫</span>
       </div>
       <button
-        class="w-full block bg-[#4B2E2E] text-white py-3 px-[30px] rounded-[50px] font-semibold cursor-pointer transition-[var(--transition)] border-none text-center hover:bg-[#3a2424] hover:-translate-y-[3px] hover:shadow-[0_5px_15px_rgba(75,46,46,0.3)]"
+        class="w-full block bg-[#4B2E2E] text-white py-3 px-[30px] font-semibold cursor-pointer transition-[var(--transition)] border-none text-center hover:bg-[#3a2424] hover:-translate-y-[3px] hover:shadow-[0_5px_15px_rgba(75,46,46,0.3)]"
         id="checkout-btn">
         Thanh toán ngay
       </button>
@@ -769,21 +770,21 @@
   <div class="product-modal" id="product-modal">
     <div class="bg-surface-container-lowest p-8 rounded-lg shadow-lg max-w-lg mx-auto mt-40 text-center">
       <div class="flex flex-row justify-between justify-center items-center mb-4">
-        <h2 class="flex text-2xl font-display-lg mb-4">Nước mắm Đông Hải 43N 
-          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 ml-4 font-label-caps text-[8px]">
+        <h2 class="flex text-2xl font-display-lg mb-4" id="product-name">Nước mắm Đông Hải 43N 
+          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 ml-4 font-label-caps text-[8px]" id="product-classify">
             HẠNG THƯỢNG HẠNG
           </span>
         </h2>
         <svg class="lucide lucide-x hover:text-imperial-gold hover:cursor-pointer transition-colors relative bottom-2" id="product-modal-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" data-lucide="x" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg>
       </div>
-      <div class="grid grid-cols-2 gap-8">
-        <div>
+      <div class="flex flex-col md:flex-row gap-6">
+        <div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-2xl">
           <img alt="Hình ảnh chi tiết sản phẩm" class="w-full h-full object-cover rounded-lg shadow-md"
             src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" />  
         </div>
         <div class="text-left flex flex-col">
-          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary mb-4" id="product-price">1.000.000 ₫</span></h3>
-          <p class="mb-6">Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.</p>
+          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary  mb-4" id="product-price">1.000.000 ₫</span></h3>
+          <p class="mb-6" id="product-description">Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.</p>
           <button
             class="w-full mt-auto bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
             id="add-to-cart-btn">
@@ -818,6 +819,41 @@
   </div>
   <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-[1500] hidden" id="overlay"></div>
   <script>
+    // Set the cart cookie (Automatically handles JSON encoding and paths)
+    function setCartCookie(cartData) {
+      Cookies.set('shopping_cart', cartData, { expires: 7, path: '/' });
+      console.log("Cookie successfully set via js-cookie:", Cookies.get('shopping_cart'));
+    }
+
+    // Get the cart array (Automatically handles JSON decoding)
+    function getCartCookie() {
+      return Cookies.get('shopping_cart') ? Cookies.get('shopping_cart', { json: true }) : [];
+    }
+
+    // Render cart items in the sidebar
+    function renderCartSidebar() {
+      const cart = getCartCookie();
+      const $container = $('#cart-items'); // Your sidebar container
+      $container.empty();
+
+      if (cart.length === 0) {
+        $container.html('<p class="text-center p-4">Giỏ hàng trống</p>');
+        return;
+      }
+
+      cart.forEach(item => {
+        $container.append(`
+          <div class="flex justify-between items-center border-b py-2">
+            <div>
+              <h4 class="font-bold">${item.name}</h4>
+              <p class="text-sm text-gray-500">${item.price.toLocaleString()} ₫ x ${item.quantity}</p>
+            </div>
+            <span class="font-semibold">${(item.price * item.quantity).toLocaleString()} ₫</span>
+          </div>
+        `);
+      });
+    }
+
     // JavaScript for FAB and Cart Sidebar
     $(document).ready(function () {
       $('#cart-button').on('click', function () {
@@ -844,6 +880,52 @@
       });
 
       $('#add-to-cart-43N, #add-to-cart-40N, #add-to-cart-35N').on('click', function () {
+        const productId = this.id.split('-')[3]; // Extract product ID from button ID
+        let name, price; // Declare variables to hold product name and price
+      
+        if (!productId) {
+          console.error('Product ID not found for button:', this.id);
+          return;
+        } else if (productId === '43N') {
+          name = 'Nước mắm Đông Hải 43N';
+          price = 1000000;
+        } else if (productId === '40N') {
+          name = 'Nước mắm Đông Hải 40N';
+          price = 800000;
+        } else if (productId === '35N') {
+          name = 'Nước mắm Đông Hải 35N';
+          price = 600000;
+        }
+
+        const productName = name; // Get product name from the card      
+        const productPrice = price; // Extract price from the description     
+
+        // Thêm sản phẩm vào giỏ hàng (lưu vào cookie)
+        let cart = getCartCookie();
+        let existingItem = cart.find(item => item.id === productId);
+        if (existingItem) {
+          // If it exists, increase quantity
+          existingItem.quantity += 1;
+          console.log('Product already in cart, increasing quantity:', productId);
+        } else {
+          // If it's new, push a new product object
+          cart.push({
+            id: productId,
+            name: productName,
+            price: parseInt(productPrice),
+            quantity: 1
+          });
+        }
+        
+        setCartCookie(cart);
+
+        console.log('Adding product to cart:', productId);
+        console.log('Product name:', productName);
+        console.log('Product price:', productPrice);
+        console.log('Quantity:', cart.find(item => item.id === productId).quantity);
+
+        renderCartSidebar();
+
         $('#notification').addClass('fade-in');
         setTimeout(function () {
           $('#notification').removeClass('fade-in');
@@ -853,12 +935,73 @@
       $('#detail-43N, #detail-40N, #detail-35N').on('click', function () {
         $('#product-modal').addClass('fade-in');
         $('#overlay').removeClass('hidden');
+
+        // Cập nhật nội dung chi tiết sản phẩm dựa trên nút được nhấn
+        if (this.id === 'detail-43N') {
+          $('#product-price').text('1.000.000 ₫').attr('data-price', '1000000'); // Cập nhật giá cho sản phẩm 43N
+          $('#product-name').text('Nước mắm Đông Hải 43N').attr('product-id', '43N'); // Cập nhật tên cho sản phẩm 43N
+          $('.product-modal img').attr('src', './assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png'); // Cập nhật hình ảnh cho sản phẩm 43N
+          $('#product-description').text('Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.'); // Cập nhật mô tả cho sản phẩm 43N
+          $('#product-classify').text('HẠNG THƯỢNG HẠNG'); // Cập nhật phân loại cho sản phẩm 43N
+        } else if (this.id === 'detail-40N') {
+          $('#product-price').text('800.000 ₫').attr('data-price', '800000');  // Cập nhật giá cho sản phẩm 40N
+          $('#product-name').text('Nước mắm Đông Hải 40N').attr('product-id', '40N'); // Cập nhật tên cho sản phẩm 40N
+          $('.product-modal img').attr('src', './assets/images/z7890083636863_d541172f5eb8e0310144e0e5789ee7ff.jpg'); // Cập nhật hình ảnh cho sản phẩm 40N
+          $('#product-description').text('Hương vị cân bằng hoàn hảo, phù hợp cho mọi bữa cơm gia đình.'); // Cập nhật mô tả cho sản phẩm 40N
+          $('#product-classify').text('HẠNG ĐẶC BIỆT'); // Cập nhật phân loại cho sản phẩm 40N
+        } else if (this.id === 'detail-35N') {
+          $('#product-price').text('600.000 ₫').attr('data-price', '600000');  // Cập nhật giá cho sản phẩm 35N
+          $('#product-name').text('Nước mắm Đông Hải 35N').attr('product-id', '35N'); // Cập nhật tên cho sản phẩm 35N
+          $('.product-modal img').attr('src', './assets/images/z7890085109257_c6f8ba663e0f4b3ab5a42cb475ec287c.jpg'); // Cập nhật hình ảnh cho sản phẩm 35N
+          $('#product-description').text('Màu hổ phách trong trẻo, mặn mòi hương vị biển khơi.'); // Cập nhật mô tả cho sản phẩm 35N
+          $('#product-classify').text('HẠNG NGUYÊN CHẤT'); // Cập nhật phân loại cho sản phẩm 35N
+        }
       });
 
-      $('#product-modal-close, #overlay').on('click', function () {
-        $('#product-modal').removeClass('fade-in');
-        $('#overlay').addClass('hidden');
+      $('#product-modal-close, #overlay, #product-modal').on('click', function (e) {
+        if (e.target === this) {
+          $('#product-modal').removeClass('fade-in');
+          $('#overlay').addClass('hidden');
+        }
       });
+
+      $('#add-to-cart-btn').on('click', function () {
+        const productId = $('#product-name').attr('product-id');
+        const productName = $('#product-name').text();
+        const productPrice = Number($('#product-price').attr('data-price'));
+
+        // Thêm sản phẩm vào giỏ hàng (lưu vào cookie)
+        let cart = getCartCookie();
+        let existingItem = cart.find(item => item.id === productId);
+
+        if (existingItem) {
+          // If it exists, increase quantity
+          existingItem.quantity += 1;
+        } else {
+          // If it's new, push a new product object
+          cart.push({
+            id: productId,
+            name: productName,
+            price: productPrice,
+            quantity: 1
+          });
+        }
+
+        setCartCookie(cart);
+
+        console.log('Adding product to cart:', productId);
+        console.log('Product name:', productName);
+        console.log('Product price:', productPrice);
+        console.log('Quantity:', cart.find(item => item.id === productId).quantity);
+
+        renderCartSidebar();
+
+        $('#notification').addClass('fade-in');
+        setTimeout(function () {
+          $('#notification').removeClass('fade-in');
+        }, 3000);
+      });
+
     });
   </script>
 </body>
