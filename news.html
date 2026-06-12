@@ -240,6 +240,60 @@
       font-size: 10px;
       text-transform: uppercase;
     }
+
+    /* Post content modal*/
+    #post-content {
+      font-size: 0.9rem;
+    }
+
+    #post-content * {
+      margin-top: 12px;
+      margin-bottom: 12px;
+    }
+
+    #post-content h1 {
+      font-size: 2.0rem;
+      line-height: 1.0;
+    }
+
+    #post-content h2 {
+      font-size: 1.8rem;
+      line-height: 1.0;
+    }
+
+    #post-content h3 {
+      font-size: 1.6rem;
+      line-height: 1.0;
+    }
+
+    #post-content h4 {
+      font-size: 1.4rem;
+      line-height: 1.0;
+    }
+
+    #post-content h5 {
+      font-size: 1.2rem;
+      line-height: 1.0;
+    }
+
+    #post-content h6 {
+      font-size: 1.0rem;
+      line-height: 1.0;
+    }
+
+    #post-content ol {
+      list-style-type: decimal; 
+      list-style-position: inside; 
+    }
+
+    #post-content li {
+    }
+
+    #post-content img {
+      display: block;
+      height: 200px;
+      width: 100%;
+    }
   </style>
 </head>
 
@@ -321,7 +375,7 @@
       <div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
           <!-- Article 1 -->
-          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30">
+          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30" id="article-1">
             <div class="relative overflow-hidden aspect-[4/3]">
               <img alt="" class="article-image w-full h-full object-cover transition-transform duration-700 ease-out"
                 src="https://lh3.googleusercontent.com/aida/AP1WRLvgEicCqcXqY93RPAsn0ofDVdil-m65V0A-2iJEWIuBUSS8v8sylLnOHnQdlh4J6ydTkE-Y2U0dmHc2z28AK7OwPMrqxkEzd5h3DGYpgFrawBv-AZylllFw4BqL27n0kV-w1ses7P-F5KKrmgQ1L2Sad20ysN7uCdsv7HV-ZnK74uZstTLbKgFlwHC7tiNspWgAav6XLxnttuWwcG4x6mhlo-1mncZ1vqrwTTvQoa6nlAOxOXu2zpOCkFI" />
@@ -336,7 +390,7 @@
                 class="font-headline-md text-headline-sm md:text-headline-md text-ebony-wood mb-4 group-hover:text-sauce-amber transition-colors">
                 Cách pha nước chấm chuẩn vị cho từng món ăn
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
                 Nước chấm là linh hồn của món ăn Việt. Khám phá tỷ lệ vàng khi
                 pha chế nước mắm Đề Ghi cho các món chiên, luộc và nướng.
               </p>
@@ -351,7 +405,7 @@
             </div>
           </article>
           <!-- Article 2 -->
-          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30">
+          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30" id="article-2">
             <div class="relative overflow-hidden aspect-[4/3]">
               <img alt="" class="article-image w-full h-full object-cover transition-transform duration-700 ease-out"
                 src="https://lh3.googleusercontent.com/aida/AP1WRLtk0-C5J8hncYrQCIkM2wtidADUTbKeYFbKfL6ZhvihWL2XZynHflfw9K7_UYkbFRfBjIlcIv6j81mBvGmiDdbqxEmk_US8zGaDk_RtZqUUtJ0nJYHwlqcHoj6irzrjdMdeMY4KCdxPoQga0i62AtIx7AyNIs5lzBh-RQAEjnVd2hUg2oOjhGS_ila7F2J6CpZp3-4PztnHf1moagZUc6NbTXDdvWYYqB-U0PTRgOf-zjNlN6dwskyzR8c" />
@@ -367,7 +421,7 @@
                 class="font-headline-md text-headline-sm md:text-headline-md text-ebony-wood mb-4 group-hover:text-sauce-amber transition-colors">
                 Giá trị dinh dưỡng của nước mắm cốt đối với mẹ bầu
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
                 Hàm lượng đạm tự nhiên và các khoáng chất thiết yếu trong nước
                 mắm truyền thống hỗ trợ sức khỏe toàn diện cho cả mẹ và bé.
               </p>
@@ -382,7 +436,7 @@
             </div>
           </article>
           <!-- Article 3 -->
-          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30">
+          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30" id="article-3">
             <div class="relative overflow-hidden aspect-[4/3]">
               <img alt="" class="article-image w-full h-full object-cover transition-transform duration-700 ease-out"
                 src="https://lh3.googleusercontent.com/aida/AP1WRLvKEQ1LD_2GJUHDos0ozKvouRG9B5Df_MN6cjfE3d6HMNW2-X3doqHFi3L2ggkuYnbsPd9Y1F8jdKoCupkT7hfZcGsg338dXlHkDjnEwdZRa9qtYfY5NJOPS7vWHzjcvZ8qUqqPYbefbrK-nBQQ3MTJ9lTSbN1aR1yM90Bxxxj4LRMl06AADcYqf1rb2qE1lEApWf4kZ7sgXGDYZT8u2ATW-KkoUklDytaycjv1ma935maXy1Og8Y7G9yQ" />
@@ -398,7 +452,7 @@
                 class="font-headline-md text-headline-sm md:text-headline-md text-ebony-wood mb-4 group-hover:text-sauce-amber transition-colors">
                 Bí quyết kho cá nục mềm xương, ngọt thịt
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
                 Sử dụng nước mắm cao đạm Đề Ghi kết hợp với kỹ thuật kho chậm
                 giúp món cá nục mang hương vị đậm đà khó cưỡng.
               </p>
@@ -413,7 +467,7 @@
             </div>
           </article>
           <!-- Article 4 -->
-          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30">
+          <article class="article-card group flex flex-col bg-parchment-white border border-imperial-gold/30" id="article-4">
             <div class="relative overflow-hidden aspect-[4/3]">
               <img alt="" class="article-image w-full h-full object-cover transition-transform duration-700 ease-out"
                 src="https://lh3.googleusercontent.com/aida/AP1WRLsHuhN0C_fMvap9TEWxf61F078Q7Ao7sLjA2O3pyYfH26tkvnRdZVMU2LLbSey5QhuIpYRaqqq0N_V0nlEeDzQDpyPnEukMyCMIjpSeSMzvpTXyr-iQhtNvngPvKSD212LofX1eU6lBhMAxmMoQvx52kn2OFxfOJ27XaJ0GI0lRp1RZixgYZJyOQk74ecb3RIiF9QPjaoHAyBlf6I8R4A7hE7AS8Op8-BWfffIQY4wPmGDNUE7px7DOSzM" />
@@ -429,7 +483,7 @@
                 class="font-headline-md text-headline-sm md:text-headline-md text-ebony-wood mb-4 group-hover:text-sauce-amber transition-colors">
                 Lợi ích của việc sử dụng nước mắm truyền thống không phụ gia
               </h2>
-              <p class="font-body-md text-body-md text-on-surface-variant mb-6 line-clamp-2">
+              <p class="font-body-md text-body-md text-on-surface-variant mb-6">
                 Phân biệt nước mắm truyền thống nguyên chất và nước mắm công
                 nghiệp để bảo vệ sức khỏe gia đình bạn mỗi ngày.
               </p>
@@ -569,43 +623,139 @@
     </div>
   </footer>
   <!-- Post detail modal -->
-  <div class="modal" id="product-modal">
-    <div class="modal-container bg-surface-container-lowest p-8 rounded-full shadow-lg max-w-lg mx-auto text-center">
-      <div class="flex flex-row justify-between items-center mb-0">
-        <h2 class="flex flex-col md:flex-row text-2xl font-display-lg mb-4">
-          <span id="product-name">Nước mắm Đông Hải 43N</span>
-          <span class="inline-block bg-imperial-gold/10 text-[#7A2A1D] px-4 md:ml-4 font-label-caps text-[12px]"
-            id="product-class">
-            HẠNG THƯỢNG HẠNG
+  <div class="modal" id="post-modal">
+    <div class="modal-container bg-surface-container-lowest rounded-full shadow-lg max-w-lg min-w-[75%] mx-auto">
+      <div class="relative overflow-hidden aspect-[5/1]">
+        <img alt="" class="article-image w-full h-full object-cover transition-transform border-none duration-700 ease-out" id="post-thumbnail"
+          src="https://lh3.googleusercontent.com/aida/AP1WRLvgEicCqcXqY93RPAsn0ofDVdil-m65V0A-2iJEWIuBUSS8v8sylLnOHnQdlh4J6ydTkE-Y2U0dmHc2z28AK7OwPMrqxkEzd5h3DGYpgFrawBv-AZylllFw4BqL27n0kV-w1ses7P-F5KKrmgQ1L2Sad20ysN7uCdsv7HV-ZnK74uZstTLbKgFlwHC7tiNspWgAav6XLxnttuWwcG4x6mhlo-1mncZ1vqrwTTvQoa6nlAOxOXu2zpOCkFI" />
+        <button id="post-close-btn" class="fixed top-6 right-6 z-50 flex items-center justify-center w-8 h-8 bg-white text-primary hover:text-imperial-gold rounded-[100%] shadow-xl transition-all duration-300 hover:scale-110 active:scale-95 group">
+          <span class="material-symbols-outlined text-[24px] transition-transform group-hover:rotate-90">
+            close
           </span>
-        </h2>
-        <svg class="lucide lucide-x hover:text-imperial-gold hover:cursor-pointer transition-colors relative bottom-2"
-          id="product-modal-close" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-          fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-          data-lucide="x" aria-hidden="true">
-          <path d="M18 6 6 18"></path>
-          <path d="m6 6 12 12"></path>
-        </svg>
+        </button>
       </div>
-      <div class="flex flex-col md:flex-row gap-6">
-        <div class="w-full md:w-1/2 rounded-lg overflow-hidden shadow-2xl">
-          <img alt="Hình ảnh chi tiết sản phẩm" class="w-full h-full object-cover rounded-lg shadow-md"
-            src="./assets/images/cf0ef831-800a-4f89-8c98-b504eb024f02.png" id="product-image" />
-        </div>
-        <div class="text-left flex flex-col">
-          <h3 class="text-lg font-semibold mb-2">Giá: <span class="text-2xl font-bold text-primary  mb-4"
-              id="product-price">43000 ₫</span></h3>
-          <p class="mb-6" id="product-description">Độ đạm cao nhất, vị ngọt hậu sâu sắc, hương thơm tinh tế.</p>
-          <button
-            class="w-full mt-auto bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:bg-aged-terracotta transition-all duration-300 shadow-md active:scale-95"
-            id="add-to-cart-btn">
-            Thêm vào giỏ hàng
-          </button>
-        </div>
+      <div class="p-8 flex-grow flex flex-col">
+        <span
+          class="font-label-caps text-[12px] text-on-surface-variant/60 mb-3 tracking-widest"><span id="post-timestamp">20/10/2023</span> | <span id="post-category">Kiến thức</span></span>
+        <h2
+          class="font-headline-md text-headline-sm md:text-headline-md text-ebony-wood mb-4 group-hover:text-sauce-amber transition-colors" id="post-title">
+          Cách pha nước chấm chuẩn vị cho từng món ăn
+        </h2>
+        <p class="font-body-md text-body-md text-on-surface-variant border-t border-primary/30 pt-4" id="post-content">
+          Nước chấm là linh hồn của món ăn Việt. Khám phá tỷ lệ vàng khi
+          pha chế nước mắm Đề Ghi cho các món chiên, luộc và nướng.
+        </p>
       </div>
     </div>
   </div>
+  <div class="fixed top-0 left-0 w-full h-full bg-black/50 z-[1500] hidden" id="overlay"></div>
   <script>
+    function postModalRender(postId) {
+      const postList = [
+        { 
+          'id' : 'article-1',
+          'title': 'Cách pha nước chấm chuẩn vị cho từng món ăn',
+          'timestamp': '20/10/2023',
+          'category': 'Kiến thức',
+          'thumbnail': './assets/images/z7890073536115_bbc2e397cc6dcc18444b780361bc6293.jpg',
+          'context': 'Nước chấm là linh hồn của món ăn Việt. Khám phá tỷ lệ vàng khi pha chế nước mắm Đề Ghi cho các món chiên, luộc và nướng.',
+          'content': `Nước chấm từ lâu đã được ví như "linh hồn" của các món ăn Việt, là chất xúc tác hoàn hảo giúp nâng tầm hương vị của từng nguyên liệu. Tuy nhiên, mỗi một kiểu chế biến—dù là chiên rán đậm đà, đồ luộc thanh đạm, hay các món hấp ngọt tự nhiên—đều đòi hỏi một công thức nước chấm với tỷ lệ biến tấu riêng biệt. Khám phá ngay tỷ lệ vàng khi pha chế nước mắm Đông Hải để tạo nên những chén nước chấm đúng điệu cho mâm cơm gia đình:
+<h4><strong>Nước mắm tỏi ớt chua ngọt (Dành cho món chiên, rán)</strong></h4>
+Món chiên rán nhiều dầu mỡ cần một vị chua ngọt thanh mát để cân bằng lại vị giác.<br>
+Tỷ lệ: 1 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng nước cốt chanh : 4 muỗng nước ấm.<br>
+Cách làm: Khuấy tan đường với nước ấm và chanh trước, sau đó thêm nước mắm vào. Cuối cùng, thả tỏi băm và ớt băm nhuyễn lên trên để tỏi ớt nổi đẹp mắt trên bề mặt.
+<h4><strong>Nước mắm gừng ấm nồng (Dành cho món luộc, hấp)</strong></h4>
+Các món luộc (như thịt vịt, cá hấp, ốc luộc) có tính hàn, cực kỳ hợp với vị cay ấm, nồng nàn của gừng già.<br>
+Tỷ lệ: 2 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng gừng giã nhuyễn : 1 muỗng nước cốt chanh : 1 muỗng nước ấm.<br>
+Cách làm: Giã nhuyễn gừng và tỏi ớt, hòa tan đường cùng nước mắm và chanh, sau đó trộn đều phần cốt gừng vào để tạo độ sánh nhẹ.
+<h4><strong>Nước mắm nguyên chất dầm ớt (Dành cho rau củ luộc)</strong></h4>
+Rau củ luộc cần giữ trọn vẹn vị ngọt tự nhiên, không nên dùng nước chấm quá loãng hay quá nhiều gia vị lấn át.<br>
+Cách làm: Sử dụng nước mắm Đông Hải nguyên chất (đặc biệt là dòng 43N Thượng Hạng hoặc 40N Đặc Biệt), thêm vài lát ớt sừng cắt mỏng. Vị mặn mòi nguyên bản kết hợp với hậu vị ngọt sâu sẽ khiến đĩa rau luộc trở nên hấp dẫn hơn bao giờ hết.
+Mẹo nhỏ từ Đông Hải: Để tỏi và ớt băm luôn nổi lên trên mặt chén nước chấm, hãy luôn băm thật khô ráo (không để dính nước) và chỉ cho chúng vào sau cùng, sau khi đã hòa tan hoàn toàn hỗn hợp nước mắm, đường và chanh.
+`
+        },
+        { 
+          'id' : 'article-2',
+          'title': 'Giá trị dinh dưỡng của nước mắm cốt đối với mẹ bầu',
+          'timestamp': '15/10/2023',
+          'category': 'Sức khỏe',
+          'thumbnail': './assets/images/',
+          'context': 'Hàm lượng đạm tự nhiên và các khoáng chất thiết yếu trong nước mắm truyền thống hỗ trợ sức khỏe toàn diện cho cả mẹ và bé.',
+          'content': `Nước chấm từ lâu đã được ví như "linh hồn" của các món ăn Việt, là chất xúc tác hoàn hảo giúp nâng tầm hương vị của từng nguyên liệu. Tuy nhiên, mỗi một kiểu chế biến—dù là chiên rán đậm đà, đồ luộc thanh đạm, hay các món hấp ngọt tự nhiên—đều đòi hỏi một công thức nước chấm với tỷ lệ biến tấu riêng biệt. Khám phá ngay tỷ lệ vàng khi pha chế nước mắm Đông Hải để tạo nên những chén nước chấm đúng điệu cho mâm cơm gia đình:
+<h4><strong>Nước mắm tỏi ớt chua ngọt (Dành cho món chiên, rán)</strong></h4>
+Món chiên rán nhiều dầu mỡ cần một vị chua ngọt thanh mát để cân bằng lại vị giác.<br>
+Tỷ lệ: 1 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng nước cốt chanh : 4 muỗng nước ấm.<br>
+Cách làm: Khuấy tan đường với nước ấm và chanh trước, sau đó thêm nước mắm vào. Cuối cùng, thả tỏi băm và ớt băm nhuyễn lên trên để tỏi ớt nổi đẹp mắt trên bề mặt.
+<h4><strong>Nước mắm gừng ấm nồng (Dành cho món luộc, hấp)</strong></h4>
+Các món luộc (như thịt vịt, cá hấp, ốc luộc) có tính hàn, cực kỳ hợp với vị cay ấm, nồng nàn của gừng già.<br>
+Tỷ lệ: 2 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng gừng giã nhuyễn : 1 muỗng nước cốt chanh : 1 muỗng nước ấm.<br>
+Cách làm: Giã nhuyễn gừng và tỏi ớt, hòa tan đường cùng nước mắm và chanh, sau đó trộn đều phần cốt gừng vào để tạo độ sánh nhẹ.
+<h4><strong>Nước mắm nguyên chất dầm ớt (Dành cho rau củ luộc)</strong></h4>
+Rau củ luộc cần giữ trọn vẹn vị ngọt tự nhiên, không nên dùng nước chấm quá loãng hay quá nhiều gia vị lấn át.<br>
+Cách làm: Sử dụng nước mắm Đông Hải nguyên chất (đặc biệt là dòng 43N Thượng Hạng hoặc 40N Đặc Biệt), thêm vài lát ớt sừng cắt mỏng. Vị mặn mòi nguyên bản kết hợp với hậu vị ngọt sâu sẽ khiến đĩa rau luộc trở nên hấp dẫn hơn bao giờ hết.
+Mẹo nhỏ từ Đông Hải: Để tỏi và ớt băm luôn nổi lên trên mặt chén nước chấm, hãy luôn băm thật khô ráo (không để dính nước) và chỉ cho chúng vào sau cùng, sau khi đã hòa tan hoàn toàn hỗn hợp nước mắm, đường và chanh.
+`
+        },
+        { 
+          'id' : 'article-3',
+          'title': 'Bí quyết kho cá nục mềm xương, ngọt thịt',
+          'timestamp': '10/10/2023',
+          'category': 'Ẩm thực',
+          'thumbnail': './assets/images/',
+          'context': 'Sử dụng nước mắm cao đạm Đề Ghi kết hợp với kỹ thuật kho chậm giúp món cá nục mang hương vị đậm đà khó cưỡng.',
+          'content': `Nước chấm từ lâu đã được ví như "linh hồn" của các món ăn Việt, là chất xúc tác hoàn hảo giúp nâng tầm hương vị của từng nguyên liệu. Tuy nhiên, mỗi một kiểu chế biến—dù là chiên rán đậm đà, đồ luộc thanh đạm, hay các món hấp ngọt tự nhiên—đều đòi hỏi một công thức nước chấm với tỷ lệ biến tấu riêng biệt. Khám phá ngay tỷ lệ vàng khi pha chế nước mắm Đông Hải để tạo nên những chén nước chấm đúng điệu cho mâm cơm gia đình:
+<h4><strong>Nước mắm tỏi ớt chua ngọt (Dành cho món chiên, rán)</strong></h4>
+Món chiên rán nhiều dầu mỡ cần một vị chua ngọt thanh mát để cân bằng lại vị giác.<br>
+Tỷ lệ: 1 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng nước cốt chanh : 4 muỗng nước ấm.<br>
+Cách làm: Khuấy tan đường với nước ấm và chanh trước, sau đó thêm nước mắm vào. Cuối cùng, thả tỏi băm và ớt băm nhuyễn lên trên để tỏi ớt nổi đẹp mắt trên bề mặt.
+<h4><strong>Nước mắm gừng ấm nồng (Dành cho món luộc, hấp)</strong></h4>
+Các món luộc (như thịt vịt, cá hấp, ốc luộc) có tính hàn, cực kỳ hợp với vị cay ấm, nồng nàn của gừng già.<br>
+Tỷ lệ: 2 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng gừng giã nhuyễn : 1 muỗng nước cốt chanh : 1 muỗng nước ấm.<br>
+Cách làm: Giã nhuyễn gừng và tỏi ớt, hòa tan đường cùng nước mắm và chanh, sau đó trộn đều phần cốt gừng vào để tạo độ sánh nhẹ.
+<h4><strong>Nước mắm nguyên chất dầm ớt (Dành cho rau củ luộc)</strong></h4>
+Rau củ luộc cần giữ trọn vẹn vị ngọt tự nhiên, không nên dùng nước chấm quá loãng hay quá nhiều gia vị lấn át.<br>
+Cách làm: Sử dụng nước mắm Đông Hải nguyên chất (đặc biệt là dòng 43N Thượng Hạng hoặc 40N Đặc Biệt), thêm vài lát ớt sừng cắt mỏng. Vị mặn mòi nguyên bản kết hợp với hậu vị ngọt sâu sẽ khiến đĩa rau luộc trở nên hấp dẫn hơn bao giờ hết.
+Mẹo nhỏ từ Đông Hải: Để tỏi và ớt băm luôn nổi lên trên mặt chén nước chấm, hãy luôn băm thật khô ráo (không để dính nước) và chỉ cho chúng vào sau cùng, sau khi đã hòa tan hoàn toàn hỗn hợp nước mắm, đường và chanh.
+`
+        },
+        { 
+          'id' : 'article-4',
+          'title': 'Lợi ích của việc sử dụng nước mắm truyền thống không phụ gia',
+          'timestamp': '5/10/2023',
+          'category': 'Kiến thức',
+          'thumbnail': './assets/images/',
+          'context': 'Phân biệt nước mắm truyền thống nguyên chất và nước mắm công nghiệp để bảo vệ sức khỏe gia đình bạn mỗi ngày.',
+          'content': `Nước chấm từ lâu đã được ví như "linh hồn" của các món ăn Việt, là chất xúc tác hoàn hảo giúp nâng tầm hương vị của từng nguyên liệu. Tuy nhiên, mỗi một kiểu chế biến—dù là chiên rán đậm đà, đồ luộc thanh đạm, hay các món hấp ngọt tự nhiên—đều đòi hỏi một công thức nước chấm với tỷ lệ biến tấu riêng biệt. Khám phá ngay tỷ lệ vàng khi pha chế nước mắm Đông Hải để tạo nên những chén nước chấm đúng điệu cho mâm cơm gia đình:
+<h4><strong>Nước mắm tỏi ớt chua ngọt (Dành cho món chiên, rán)</strong></h4>
+Món chiên rán nhiều dầu mỡ cần một vị chua ngọt thanh mát để cân bằng lại vị giác.<br>
+Tỷ lệ: 1 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng nước cốt chanh : 4 muỗng nước ấm.<br>
+Cách làm: Khuấy tan đường với nước ấm và chanh trước, sau đó thêm nước mắm vào. Cuối cùng, thả tỏi băm và ớt băm nhuyễn lên trên để tỏi ớt nổi đẹp mắt trên bề mặt.
+<h4><strong>Nước mắm gừng ấm nồng (Dành cho món luộc, hấp)</strong></h4>
+Các món luộc (như thịt vịt, cá hấp, ốc luộc) có tính hàn, cực kỳ hợp với vị cay ấm, nồng nàn của gừng già.<br>
+Tỷ lệ: 2 muỗng nước mắm Đông Hải : 1 muỗng đường : 1 muỗng gừng giã nhuyễn : 1 muỗng nước cốt chanh : 1 muỗng nước ấm.<br>
+Cách làm: Giã nhuyễn gừng và tỏi ớt, hòa tan đường cùng nước mắm và chanh, sau đó trộn đều phần cốt gừng vào để tạo độ sánh nhẹ.
+<h4><strong>Nước mắm nguyên chất dầm ớt (Dành cho rau củ luộc)</strong></h4>
+Rau củ luộc cần giữ trọn vẹn vị ngọt tự nhiên, không nên dùng nước chấm quá loãng hay quá nhiều gia vị lấn át.<br>
+Cách làm: Sử dụng nước mắm Đông Hải nguyên chất (đặc biệt là dòng 43N Thượng Hạng hoặc 40N Đặc Biệt), thêm vài lát ớt sừng cắt mỏng. Vị mặn mòi nguyên bản kết hợp với hậu vị ngọt sâu sẽ khiến đĩa rau luộc trở nên hấp dẫn hơn bao giờ hết.
+Mẹo nhỏ từ Đông Hải: Để tỏi và ớt băm luôn nổi lên trên mặt chén nước chấm, hãy luôn băm thật khô ráo (không để dính nước) và chỉ cho chúng vào sau cùng, sau khi đã hòa tan hoàn toàn hỗn hợp nước mắm, đường và chanh.
+`
+        }
+      ];
+      
+      const post = postList.find(item => item.id === postId);
+
+      if (post) {
+        $('#post-title').text(post.title);
+        $('#post-timestamp').text(post.timestamp);
+        $('#post-category').text(post.category);
+        $('#post-thumbnail').attr({
+          'src': post.thumbnail,
+          'alt': post.title
+        });
+        $('#post-content').empty().append(post.content);
+      }
+    };
+
     // Micro-interactions
     document.querySelectorAll("button, a").forEach((el) => {
       el.addEventListener("mousedown", () => {
@@ -626,6 +776,20 @@
         header.classList.add("shadow-sm");
       } else {
         header.classList.remove("shadow-sm");
+      }
+    });
+
+    $('article').on('click', function (e) {
+      $('#post-modal').addClass('fade-in');
+      $('#overlay').removeClass('hidden')
+
+      postModalRender(this.id);
+    });
+
+    $('#post-modal, #post-close-btn, #overlay').on('click', function (e) {
+      if (e.target === this || $(e.target).closest('#post-close-btn').length || e.target.id === 'overlay') {
+        $('#post-modal').removeClass('fade-in');
+        $('#overlay').addClass('hidden');
       }
     });
   </script>
